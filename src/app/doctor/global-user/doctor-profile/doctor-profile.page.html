@@ -1,0 +1,63 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Doctor Profile</ion-title>
+    <!-- <div class="toolbar-title">
+      <div class="title">
+        <h1>
+          Doctor Profile
+        </h1>
+      </div>
+    </div> -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="wrapper ion-padding-bottom">
+    <div class="wrapper-header">
+      <div class="img-blc">
+        <img src="../../../assets/client-03.jpg" alt="" srcset="">
+        <span></span>
+      </div>
+    </div>
+    <div class="wrapper-content">
+      <div class="wrapper-list">
+        <ion-text>
+          <h5 class="bold">Emily Hunt</h5>
+          <small>Cardiologist</small>
+          <div class="review">
+            <ion-icon name="star-outline"></ion-icon>
+            <h5><span>5.0</span> (234 reviewer)</h5>
+          </div>
+        </ion-text>
+        <div class="booking-btn ion-padding-top">
+          <button class="btn btn-round btn-primary" [routerLink]="['/global-user/booking']"> book appointment
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapper ion-padding-top">
+    <ion-item [routerLink]="['/global-user/personal-info']">
+      <ion-icon color="primary" slot="start" name="reorder"></ion-icon>
+      <ion-label>Persolnal Information</ion-label>
+      <ion-icon sloat="end" name="arrow-forward" mode="ios"></ion-icon>
+    </ion-item>
+
+    <ion-item [routerLink]="['/global-user/address']">
+      <ion-icon color="secondary" slot="start" name="lock" mode="ios"></ion-icon>
+      <ion-label>Working Address</ion-label>
+      <ion-icon sloat="end" name="arrow-forward" mode="ios"></ion-icon>
+    </ion-item>
+
+    <ion-item [routerLink]="['/global-user/reviewer']">
+      <ion-icon color="success" slot="start" name="person"></ion-icon>
+      <ion-label>Reviewer</ion-label>
+      <ion-icon sloat="end" name="arrow-forward" mode="ios"></ion-icon>
+    </ion-item>
+
+  </div>
+</ion-content>

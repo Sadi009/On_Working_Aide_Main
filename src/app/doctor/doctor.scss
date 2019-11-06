@@ -1,0 +1,68 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+:focus {
+  outline: none !important;
+}
+.pb-60 {
+  padding-bottom: 60px !important;
+}
+.bold {
+  font-weight: bold;
+}
+//--------------------------------------------------//
+//---------------- Custom Header ------------------//
+ion-content {
+  --background: #f7fafc;
+}
+ion-header {
+  ion-toolbar {
+    --background: #5e72e4;
+    --background: linear-gradient(315deg, #7c8ce9 0%, #5e72e4 74%);
+    color: #fff;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    ion-title {
+      text-align: center;
+    }
+    .searchbar-input.sc-ion-searchbar-md {
+      border-radius: 20px;
+      font-size: 14px;
+      color: #000;
+      box-shadow: none;
+      width: 100%;
+    }
+    ion-back-button {
+      position: absolute;
+    }
+  }
+}
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import "~@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+/* Material CSS */
+// @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+// @import "~@angular/material/prebuilt-themes/pink-blugrey.css";
+// @import "~@angular/material/prebuilt-themes/purple-green.css";

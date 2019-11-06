@@ -1,0 +1,190 @@
+
+.page-checkout {
+  .sc-ion-segment-md-h
+  .sc-ion-segment-ios-h {
+    --color-checked: #85e0e0;
+    --indicator-color-checked: transparent;
+    --ripple-color: transparent;
+    --background-hover: transparent;
+  }
+  .checkout-levels {
+    .wrapper {
+      position: relative;
+      width: 100%;
+      padding: 10px;
+      overflow: hidden;
+      border-radius: 15px;
+      background: rgba(255, 255, 255, 0.98);
+      box-shadow: 0 4px 10px rgba(0, 30, 84, 0.12);
+      box-shadow: 0 5px 10px rgba($color: #5507cd, $alpha: 0.15);
+    }
+  }
+  .shipping,
+  .payment {
+    .wrapper {
+      position: relative;
+      margin: 10px 0;
+      .wrapper-title {
+        padding: 15px 5px;
+        h4 {
+          font-size: 14px;
+          margin-top: 2px;
+          margin-bottom: 2px;
+          // font-weight: 600;
+          font-family: monospace;
+          span:nth-child(1) {
+            font-weight: 800;
+          }
+          span:nth-child(2) {
+            color: #999;
+          }
+        }
+      }
+      .wrapper-content {
+        form {
+          margin: 5px 0;
+          ion-item {
+            border-radius: 15px !important;
+            border: 2px solid #fff !important;
+            margin-bottom: 20px;
+            --min-height: 50px;
+            --background: #e6f2ff;
+            --transition: background-color 1s ease-out;
+            --border-color: transparent;
+            --inner-border-width: 0;
+            --highlight-height: 2px;
+            --highlight-color-focused: linear-gradient(
+                to top,
+                #9c27b0 2px,
+                rgba(156, 39, 176, 0) 2px
+              ),
+              linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px);
+          }
+          .in-item {
+            --color: #999;
+            --color-checked: #ac39ac;
+            --border-width: 3px;
+            --border-style: solid;
+            width: 25px;
+            height: 25px;
+          }
+          .item .sc-ion-label-md-h,
+          .item .sc-ion-label-ios-h {
+            --color: #999;
+            text-transform: capitalize;
+          }
+          ion-icon {
+            margin: 0 5px 0 0;
+          }
+        }
+      }
+    }
+  }
+  .sc-ion-card-md-h {
+    --background: #e6f2ff;
+    border-radius: 15px;
+    border: 2px solid #fff;
+    margin: 10px 0 !important;
+    box-shadow: none;
+    font-family: sans-serif;
+  }
+  .confirm {
+    ion-item {
+      --min-height: 50px;
+      --background: #e6f2ff;
+    }
+    .item .sc-ion-label-md-h,
+    .item .sc-ion-label-ios-h {
+      --color: #999;
+      text-transform: capitalize;
+    }
+    .wrapper {
+      position: relative;
+      margin: 10px 0;
+    }
+    .wrapper-item {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    .icon {
+      padding: 6px 7px 4px 7px;
+      background: rgba($color: #000, $alpha: 0.1);
+      color: #fff;
+      border-radius: 15px;
+    }
+    .wrapper-img {
+      display: block;
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+      background: #fff;
+      border: 2px solid #fff;
+      width: 140px;
+      height: 160px;
+      margin: 0 10px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .wrapper-desc {
+      text-transform: capitalize;
+      font-family: monospace;
+      .date {
+        font-size: 14px;
+        color: #85e0e0;
+        text-transform: uppercase;
+      }
+      .name,
+      .price {
+        font-size: 16px;
+        color: #000000;
+        line-height: 2em;
+      }
+      .info {
+        display: flex;
+        flex-direction: column;
+        margin: 5px 0;
+        span {
+          font-size: 12px;
+          color: #999;
+        }
+      }
+    }
+  }
+  .footer {
+    .card {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: calc(100% - 20px);
+      margin: 10px;
+      padding: 10px;
+      overflow: hidden;
+      border-radius: 15px;
+      background: rgba(255, 255, 255, 0.98);
+      box-shadow: 0 4px 10px rgba(0, 30, 84, 0.12);
+      box-shadow: 0 5px 10px rgba($color: #5507cd, $alpha: 0.15);
+    }
+    .price {
+      h1 {
+        font-size: 18px;
+        font-family: monospace;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+        color: #000;
+        margin-top: 15px;
+        span {
+          color: #ff8765;
+        }
+      }
+    }
+    .btn-primary {
+      color: #fff;
+      background: #00bcd4;
+    }
+  }
+}

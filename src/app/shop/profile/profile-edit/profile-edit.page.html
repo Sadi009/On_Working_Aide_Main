@@ -1,0 +1,77 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <div class="toolbar-title">
+      <div class="title">
+        <h1>
+          Edit My Account
+        </h1>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="page-profile-edit ion-padding">
+
+  <form>
+    <h6 class="heading-small text-muted mb-4">
+      User information
+      <span class="dot"></span>
+    </h6>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label position="floating">Name</ion-label>
+          <ion-input type="name" name="name" required>
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Email</ion-label>
+          <ion-input type="email" name="email" required>
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Password</ion-label>
+          <ion-input type="password" name="password" required>
+          </ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <h6 class="heading-small text-muted mb-4">
+      Contact information
+      <span class="dot"></span>
+    </h6>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Address</ion-label>
+          <ion-input type="text" name="address" required>
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>City</ion-label>
+          <ion-input type="text" name="city" required>
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Country</ion-label>
+          <ion-input type="text" name="country" required>
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Postal code</ion-label>
+          <ion-input type="number" name="postalCode" required>
+          </ion-input>
+        </ion-item>
+        <div class="login-btn">
+          <button class="btn btn-primary">
+            Confirm
+          </button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </form>
+
+</ion-content>

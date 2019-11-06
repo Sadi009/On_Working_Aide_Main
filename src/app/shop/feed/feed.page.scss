@@ -1,0 +1,102 @@
+ion-content {
+  --background: linear-gradient(180deg, #e6f2ff 0%, #fff 14%);
+}
+.page-feed {
+  .catagory,
+  .cate-level {
+    .wrapper {
+      position: relative;
+      margin: 10px 0;
+      .wrapper-content {
+        .wrapper-blk {
+          position: relative;
+          border-radius: 10px;
+          display: block;
+          overflow: hidden;
+          border: 2px solid #fff;
+          box-shadow: 0 10px 10px rgba(0, 30, 84, 0.05);
+        }
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+  .catagory {
+    .wrapper-content {
+      .wrapper-blk {
+        height: 100px;
+        box-shadow: 0 4px 10px rgba(0, 30, 84, 0.12),
+          0 1px 20px rgba(0, 30, 84, 0.08);
+      }
+      .swiper-zoom-container > img {
+        -o-object-fit: cover !important;
+        object-fit: cover !important;
+      }
+      .level {
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background: linear-gradient(to bottom, transparent, #fff);
+        padding: 8px 7px;
+        font-size: 14px;
+        font-weight: 700;
+        color: #000;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        ion-icon {
+          margin-bottom: -3px;
+        }
+      }
+    }
+    .line-1,
+    .line-2,
+    .line-3 {
+      position: absolute;
+      content: "";
+      left: -20px;
+      top: 0;
+      width: 150%;
+      height: 2px;
+      background: #fff;
+      background: rgba(255, 255, 255, 0.7);
+    }
+    .line-1 {
+      top: 10px;
+    }
+    .line-2 {
+      top: 35px;
+    }
+    .line-3 {
+      top: 60px;
+    }
+  }
+  .cate-level {
+    .wrapper-content {
+      .wrapper-blk {
+        width: 140px;
+        height: 180px;
+      }
+      .swiper-zoom-container > img {
+        -o-object-fit: cover !important;
+        object-fit: cover !important;
+      }
+      .level {
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: 0;
+        margin-bottom: 20px;
+        background: #ff8765;
+        padding: 5px 7px;
+        font-size: 12px;
+        color: #ffffff;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+    }
+  }
+}

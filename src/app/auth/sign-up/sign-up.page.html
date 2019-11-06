@@ -1,0 +1,57 @@
+<ion-content>
+  <section class="signup-content ion-padding">
+    <div class="wrapper">
+      <div class="wrapper-header">
+        <div class="img-blc">
+          <img src="../../../assets/client-03.jpg" alt="" srcset="">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="wrapper-content">
+        <div class="text-muted">
+          <small>Already Have An Account <span [routerLink]="['/log-in']"> sign in</span></small>
+          <span class="dot">&nbsp;</span>
+        </div>
+        <form>
+          <ion-row>
+            <ion-col>
+              <ion-item>
+                <div class="input-icon">
+                  <ion-icon name="person"></ion-icon>
+                </div>
+                <ion-input type="name" placeholder="name" name="name" required>
+                </ion-input>
+              </ion-item>
+              <ion-item>
+                <div class="input-icon">
+                  <ion-icon name="mail"></ion-icon>
+                </div>
+                <ion-input type="email" placeholder="Email" name="email" required>
+                </ion-input>
+              </ion-item>
+              <ion-item>
+                <div class="input-icon">
+                  <ion-icon name="key"></ion-icon>
+                </div>
+                <ion-input type="password" placeholder="Password" name="password" required>
+                </ion-input>
+              </ion-item>
+              <div class="custom-control custom-control-alternative custom-checkbox">
+                <ion-checkbox></ion-checkbox>
+                <label class="custom-control-label">
+                  <span>I agree to term & condition</span>
+                </label>
+              </div>
+              <div class="login-btn">
+                <button class="btn btn-primary">
+                  sign up
+                </button>
+              </div>
+            </ion-col>
+          </ion-row>
+        </form>
+      </div>
+    </div>
+  </section>
+</ion-content>

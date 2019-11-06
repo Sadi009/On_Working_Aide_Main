@@ -1,0 +1,35 @@
+<ion-app>
+  <ion-split-pane>
+    <ion-menu type="overlay">
+      <ion-content class="ion-padding">
+        <section class="header-section">
+          <div class="wrapper">
+            <div class="wrapper-content">
+              <div class="img-blc">
+                <img src="../assets/client-03.jpg" alt="" srcset="">
+                <!-- <span></span>
+                <span></span> -->
+              </div>
+              <div class="short-desc">
+                <h6>John Doe</h6>
+                <span>Lorem ipsum dolor</span>
+              </div>
+            </div>
+            <!-- <div class="wrapper-bg" style="background: url(../assets/bg/material-background.png);"></div> -->
+          </div>
+        </section>
+        <ion-list>
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
+            <ion-item [routerLink]="[p.url]" [class.active-item]="selectedPath === p.url">
+              <ion-icon slot="start" [name]="p.icon"></ion-icon>
+              <ion-label>
+                {{p.title}}
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet main></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

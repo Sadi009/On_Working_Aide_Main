@@ -1,0 +1,186 @@
+<ion-header>
+  <ion-toolbar [class.show-background]="showToolbar">
+    <ion-buttons slot="start">
+      <ion-menu-button>
+        <button class="menu-bar"></button>
+      </ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="page-home" fullscreen [scrollEvents]="true" (ionScroll)="onScroll($event)">
+  <section class="module-selection">
+    <ion-card>
+      <div class="b-position">
+        <ion-row class="ion-justify-content-center">
+          <ion-col size="4">
+            <div class="b-content" [routerLink]="['/global-user']">
+              <div class="b-icon i-bg-1">
+                <ion-icon name="pulse"></ion-icon>
+              </div>
+              <div class="b-desc">
+                <h4>Doctor</h4>
+              </div>
+            </div>
+          </ion-col>
+          <ion-col size="4">
+            <div class="b-content" [routerLink]="['/shop']" routerLinkActive="router-link-active">
+              <div class="b-icon i-bg-2">
+                <i color="primary" class="material-icons">
+                  shop
+                </i>
+              </div>
+              <div class="b-desc">
+                <h4>Shop</h4>
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-justify-content-center">
+          <ion-col size="4">
+            <div class="b-content" [routerLink]="['/hospital/hospital-list']">
+              <div class="b-icon i-bg-3">
+                <i class="material-icons">
+                  local_hospital
+                </i>
+              </div>
+              <div class="b-desc">
+                <h4>Hospital</h4>
+              </div>
+            </div>
+          </ion-col>
+          <ion-col size="4">
+            <div class="b-content" [routerLink]="['/ambulance']">
+              <div class="b-icon i-bg-4">
+                <i class="material-icons">
+                  local_taxi
+                </i>
+              </div>
+              <div class="b-desc">
+                <h4>Ambulance</h4>
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+        <!-- <ion-slides pager="false" [options]="slideOpts" #slide>
+          <ion-slide>
+            <div class="b-content" float-right>
+              <div class="b-icon i-bg-1">
+                <img src="../../assets/icon/home/home-1.png" />
+              </div>
+              <div class="b-desc">
+                <h4>Doctor</h4>
+              </div>
+            </div>
+          </ion-slide>
+          <ion-slide>
+            <div class="b-content" [routerLink]="['/decide']" routerLinkActive="router-link-active">
+              <div class="b-icon i-bg-2">
+                <img src="../../assets/icon/home/home-2.png" />
+              </div>
+              <div class="b-desc">
+                <h4>Shop</h4>
+              </div>
+            </div>
+          </ion-slide>
+          <ion-slide>
+            <div class="b-content" float-right>
+              <div class="b-icon i-bg-3">
+                <img src="../../assets/icon/home/home-3.png" />
+              </div>
+              <div class="b-desc">
+                <h4>Hospital</h4>
+              </div>
+            </div>
+          </ion-slide>
+          <ion-slide>
+            <div class="b-content">
+              <div class="b-icon i-bg-4">
+                <img src="../../assets/icon/home/home-4.png" />
+              </div>
+              <div class="b-desc">
+                <h4>Ambulance</h4>
+              </div>
+            </div>
+          </ion-slide>
+        </ion-slides> -->
+      </div>
+      <div id="stars"></div>
+      <div id="stars2"></div>
+      <div id="stars3"></div>
+    </ion-card>
+    <!-- <div class="bg-shape">
+      <img src="../../assets/bg/bg-wave-1.png">
+    </div> -->
+  </section>
+  <div class="shop ion-padding">
+    <section class="flash-sale">
+      <div class="wrapper">
+        <div class="wrapper-title">
+          <h5>
+            <span class="ion-text-uppercase bold">Flash Sale</span>
+            <span class="ion-float-right">View All</span>
+          </h5>
+        </div>
+        <div class="wrapper-content">
+          <ion-slides pager="true" [options]="flashSlide" #slider>
+            <ion-slide class="wrapper-blk">
+              <img src="../../assets/shop/slide-1.jpg" alt="" srcset="">
+            </ion-slide>
+            <ion-slide class="wrapper-blk">
+              <img src="../../assets/shop/slide-2.jpg" alt="" srcset="">
+            </ion-slide>
+            <ion-slide class="wrapper-blk">
+              <img src="../../assets/shop/slide-3.jpg" alt="" srcset="">
+            </ion-slide>
+          </ion-slides>
+        </div>
+      </div>
+    </section>
+    <section class="trending">
+      <div class="wrapper">
+        <div class="wrapper-title">
+          <h5>
+            <span class="ion-text-uppercase bold">trending</span>
+            <span class="ion-float-right">View All</span>
+          </h5>
+        </div>
+        <div class="wrapper-content">
+          <ion-slides pager="false" [options]="trendingSlide" #slider>
+            <ion-slide class="wrapper-blk">
+              <img src="../../assets/shop/cate5.jpg" alt="" srcset="">
+              <span class="level">
+                Demo
+              </span>
+            </ion-slide>
+            <ion-slide class="wrapper-blk">
+              <img src="../../assets/shop/cate6.jpg" alt="" srcset="">
+              <span class="level">
+                Demo
+              </span>
+            </ion-slide>
+            <ion-slide class="wrapper-blk">
+              <img src="../../assets/shop/cate7.jpg" alt="" srcset="">
+              <span class="level">
+                Demo
+              </span>
+            </ion-slide>
+            <ion-slide class="wrapper-blk">
+              <img src="../../assets/shop/cate12.jpg" alt="" srcset="">
+              <span class="level">
+                Demo
+              </span>
+            </ion-slide>
+            <ion-slide class="wrapper-blk">
+              <img src="../../assets/shop/slide-1.jpg" alt="" srcset="">
+              <span class="level">
+                Demo
+              </span>
+            </ion-slide>
+          </ion-slides>
+        </div>
+      </div>
+    </section>
+  </div>
+
+</ion-content>

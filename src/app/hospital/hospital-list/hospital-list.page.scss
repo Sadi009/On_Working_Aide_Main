@@ -1,0 +1,60 @@
+ion-content {
+  .hospital-list {
+    .sc-ion-card-md-h,
+    .sc-ion-card-ios-h {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      margin-bottom: 16px;
+      border-radius: 5px;
+      box-shadow: none;
+      background: #fff;
+      ion-item {
+        --min-height: 100px;
+        --inner-border-width: 0;
+        --background: transparent;
+      }
+    }
+    ion-thumbnail {
+      margin-top: 8px;
+      margin-bottom: 8px;
+      height: 70px;
+      width: 70px;
+      overflow: hidden;
+      border-radius: 50%;
+    }
+    .content-text {
+      text-transform: capitalize;
+      .name {
+        h6 {
+          font-weight: 600;
+          margin-top: 2px;
+          margin-bottom: 2px;
+        }
+      }
+      .location {
+        color: #666666;
+      }
+      .type {
+        color: #999;
+      }
+      small {
+        line-height: 1.3rem;
+        font-size: 90%;
+      }
+    }
+    .content-info {
+      .review {
+        font-size: 16px;
+        font-weight: 600;
+        color: #943bea;
+        margin-block-end: 18px;
+      }
+      .more {
+        text-align: right;
+        font-size: 22px;
+        color: #999;
+      }
+    }
+  }
+}
+@import "~../../../hospital.global.scss";

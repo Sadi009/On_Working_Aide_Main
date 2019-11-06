@@ -1,0 +1,91 @@
+ion-content {
+  // --background: linear-gradient(324deg, #9749f8 0%, #5e2ced 100%);
+  --background: rgba(0, 0, 0, 0)linear-gradient(45deg, #fe60a1 0%, #ff8765 100%) repeat scroll 0 0;
+  overflow: hidden !important;
+    
+}
+.wrapper {
+  .wrapper-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    .wrapper-text {
+      .wrapper-title-lg {
+        font-size: 18px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        font-weight: 600;
+        font-family: monospace;
+      }
+      .wrapper-desc {
+        position: relative;
+        margin: 20px 0;
+        margin-top: 25vh;
+        font-size: 16px;
+        font-family: monospace;
+        // color: #999;
+        ::before {
+          position: absolute;
+          content: "";
+          width: 50px;
+          height: 1px;
+          right: 42%;
+          top: -10px;
+          // background: rgba(0, 0, 0, 0)
+          //   linear-gradient(45deg, #fe60a1 0%, #ff8765 100%) repeat scroll 0 0;
+          background: #fff;
+        }
+      }
+    }
+    .wrapper-button {
+      margin-top: 10vh;
+      .btn-common {
+        width: 20em;
+      }
+      ion-button {
+        --background: transparent;
+        --background-activated: transparent;
+        --background-focused: transparent;
+        --background-hover: transparent;
+        --border-color: #fff;
+        --border-radius: 20px;
+        --border-style: solid;
+        --border-width: 1px;
+        --box-shadow: none;
+        --color: #fff;
+        --color-activated: #000;
+        --color-focused: #000;
+        --color-hover: #000;
+        --padding-bottom: 20px;
+        --padding-top: 20px;
+      }
+      .seperate-btn {
+        margin: 17px 0 15px 0;
+        position: relative;
+        font-size: 14px;
+        font-family: monospace;
+        // color: #999;
+        ::before,
+        ::after {
+          position: absolute;
+          content: "";
+          width: 4.7em;
+          height: 1px;
+          top: 8px;
+          // background: rgba(0, 0, 0, 0)
+          //   linear-gradient(45deg, #fe60a1 0%, #ff8765 100%) repeat scroll 0 0;
+          background: #fff;
+        }
+        ::before {
+          right: 9%;
+        }
+        ::after {
+          left: 9%;
+        }
+      }
+    }
+  }
+}

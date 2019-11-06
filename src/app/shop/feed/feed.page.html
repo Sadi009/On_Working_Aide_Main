@@ -1,0 +1,196 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <!-- <div class="md-title">
+      <h1>
+        <span>Aide</span>Store
+      </h1>
+    </div> -->
+    <ion-searchbar placeholder="Search For Anything You Want" inputmode="email" type="decimal"
+      (ionChange)="onSearchChange($event)" [debounce]="250">
+    </ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="page-feed ion-padding">
+  <section class="catagory">
+    <div class="wrapper">
+      <span class="line-1"></span>
+      <span class="line-2"></span>
+      <span class="line-3"></span>
+      <div class="wrapper-content">
+        <ion-slides pager="false" [options]="cateSlide" #slider>
+          <ion-slide class="wrapper-blk" [routerLink]="['/shop/categories']" routerLinkActive="router-link-active">
+            <img src="../../assets/shop/cate5.jpg" alt="" srcset="">
+            <span class="level">
+              Demo
+              <ion-icon name="arrow-forward"></ion-icon>
+            </span>
+          </ion-slide>
+          <ion-slide class="wrapper-blk">
+            <img src="../../assets/shop/cate6.jpg" alt="" srcset="">
+            <span class="level">
+              Demo
+              <ion-icon name="arrow-forward"></ion-icon>
+            </span>
+          </ion-slide>
+          <ion-slide class="wrapper-blk">
+            <img src="../../assets/shop/cate7.jpg" alt="" srcset="">
+            <span class="level">
+              Demo
+              <ion-icon name="arrow-forward"></ion-icon>
+            </span>
+          </ion-slide>
+          <ion-slide class="wrapper-blk">
+            <img src="../../assets/shop/cate12.jpg" alt="" srcset="">
+            <span class="level">
+              Demo
+              <ion-icon name="arrow-forward"></ion-icon>
+            </span>
+          </ion-slide>
+          <ion-slide class="wrapper-blk">
+            <img src="../../assets/shop/slide-1.jpg" alt="" srcset="">
+            <span class="level">
+              Demo
+              <ion-icon name="arrow-forward"></ion-icon>
+            </span>
+          </ion-slide>
+        </ion-slides>
+      </div>
+    </div>
+  </section>
+  <section class="cate-level">
+    <div class="wrapper">
+      <div class="wrapper-title">
+        <h5>
+          <span class="ion-text-uppercase bold">latest</span>
+          <span class="ion-float-right">View All</span>
+        </h5>
+      </div>
+      <div class="wrapper-content">
+        <ion-slides pager="false" [options]="trendingSlide" #slider>
+          <ion-slide class="wrapper-blk">
+            <img src="../../assets/shop/cate5.jpg" alt="" srcset="">
+            <span class="level">
+              Demo
+            </span>
+          </ion-slide>
+          <ion-slide class="wrapper-blk">
+            <img src="../../assets/shop/cate6.jpg" alt="" srcset="">
+            <span class="level">
+              Demo
+            </span>
+          </ion-slide>
+          <ion-slide class="wrapper-blk">
+            <img src="../../assets/shop/cate7.jpg" alt="" srcset="">
+            <span class="level">
+              Demo
+            </span>
+          </ion-slide>
+          <ion-slide class="wrapper-blk">
+            <img src="../../assets/shop/cate12.jpg" alt="" srcset="">
+            <span class="level">
+              Demo
+            </span>
+          </ion-slide>
+          <ion-slide class="wrapper-blk">
+            <img src="../../assets/shop/slide-1.jpg" alt="" srcset="">
+            <span class="level">
+              Demo
+            </span>
+          </ion-slide>
+        </ion-slides>
+      </div>
+    </div>
+  </section>
+  <section class="cate-level">
+    <div class="wrapper">
+      <div class="wrapper-title">
+        <h5>
+          <span class="ion-text-uppercase bold">best sell</span>
+          <span class="ion-float-right">View All</span>
+        </h5>
+      </div>
+      <div class="wrapper-content">
+        <ion-slides pager="false" [options]="trendingSlide" #slider>
+          <ion-slide class="wrapper-blk">
+            <img src="../../assets/shop/cate5.jpg" alt="" srcset="">
+            <span class="level">
+              Demo
+            </span>
+          </ion-slide>
+          <ion-slide class="wrapper-blk">
+            <img src="../../assets/shop/cate6.jpg" alt="" srcset="">
+            <span class="level">
+              Demo
+            </span>
+          </ion-slide>
+          <ion-slide class="wrapper-blk">
+            <img src="../../assets/shop/cate7.jpg" alt="" srcset="">
+            <span class="level">
+              Demo
+            </span>
+          </ion-slide>
+          <ion-slide class="wrapper-blk">
+            <img src="../../assets/shop/cate12.jpg" alt="" srcset="">
+            <span class="level">
+              Demo
+            </span>
+          </ion-slide>
+          <ion-slide class="wrapper-blk">
+            <img src="../../assets/shop/slide-1.jpg" alt="" srcset="">
+            <span class="level">
+              Demo
+            </span>
+          </ion-slide>
+        </ion-slides>
+      </div>
+    </div>
+  </section>
+  <section class="cate-level">
+    <div class="wrapper">
+      <div class="wrapper-title">
+        <h5>
+          <span class="ion-text-uppercase bold">trending</span>
+          <span class="ion-float-right">View All</span>
+        </h5>
+      </div>
+      <div class="wrapper-content">
+        <ion-slides pager="false" [options]="trendingSlide" #slider>
+          <ion-slide class="wrapper-blk">
+            <img src="../../assets/shop/cate5.jpg" alt="" srcset="">
+            <span class="level">
+              Demo
+            </span>
+          </ion-slide>
+          <ion-slide class="wrapper-blk">
+            <img src="../../assets/shop/cate6.jpg" alt="" srcset="">
+            <span class="level">
+              Demo
+            </span>
+          </ion-slide>
+          <ion-slide class="wrapper-blk">
+            <img src="../../assets/shop/cate7.jpg" alt="" srcset="">
+            <span class="level">
+              Demo
+            </span>
+          </ion-slide>
+          <ion-slide class="wrapper-blk">
+            <img src="../../assets/shop/cate12.jpg" alt="" srcset="">
+            <span class="level">
+              Demo
+            </span>
+          </ion-slide>
+          <ion-slide class="wrapper-blk">
+            <img src="../../assets/shop/slide-1.jpg" alt="" srcset="">
+            <span class="level">
+              Demo
+            </span>
+          </ion-slide>
+        </ion-slides>
+      </div>
+    </div>
+  </section>
+</ion-content>

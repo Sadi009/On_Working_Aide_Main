@@ -1,0 +1,273 @@
+ion-content {
+  .wrapper-slider {
+    .wrapper {
+      position: relative;
+      margin-bottom: 20px;
+      .wrapper-content {
+        .swiper-container {
+          margin: auto !important;
+        }
+        .wrapper-blk {
+          height: 50vh;
+          display: block;
+          position: relative;
+          overflow: hidden;
+          border-radius: 15px;
+          background: #fff;
+          border: 2px solid #fff;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          vertical-align: middle;
+          object-fit: fill;
+        }
+      }
+    }
+  }
+  .product-details.ion-padding {
+    padding-top: 0 !important;
+  }
+  .product-details {
+    .product-title {
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
+      span {
+        font-size: 16px;
+        color: #fff;
+        padding: 6px 10px;
+        background: #934bea;
+        margin-top: -5px;
+        border-radius: 0.375rem;
+      }
+      .price {
+        margin: 10px 0 !important;
+        font-size: 16px;
+        color: #934bea;
+      }
+      small {
+        color: #999999;
+      }
+    }
+    .contact {
+      ion-item {
+        --background: transparent;
+        --inner-border-width: 0;
+      }
+      button {
+        background: #fff;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        margin-left: 10px;
+        box-shadow: 0px 5px 10px -1px rgba(0, 0, 0, 0.2);
+        border: 1px solid #f2f2f2;
+      }
+      ion-icon {
+        font-size: 16px;
+        color: #934bea;
+        margin-top: 3px;
+      }
+    }
+    .toggle-btn {
+      margin: 10px 0;
+      text-align: center;
+      .btn {
+        padding: 0px 40px;
+        background: #934bea;
+        color: #fff;
+      }
+      .material-icons {
+        vertical-align: bottom;
+      }
+    }
+    .description {
+      .wrapper {
+        .wrap-title {
+          margin: 20px 0 15px;
+        }
+        .content-box {
+          color: #666;
+          background: #fff;
+          padding: 15px;
+          border-radius: 12px;
+          box-shadow: 0 1px 8px rgba(50, 50, 93, 0.15),
+            0 1px 0 rgba(0, 0, 0, 0.02);
+          p {
+            margin: 5px 0;
+          }
+          ion-list {
+            ion-item {
+              --padding-start: 0 !important;
+              --inner-padding-end: 0 !important;
+            }
+            span {
+              float: right;
+              color: #934bea;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+      .cate-details {
+        margin-top: 10px;
+        .data-list {
+          margin: 5px -5px 0;
+          flex: 1 1 auto;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        .data-item {
+          flex: 0 0 45.99%;
+          margin: 5px;
+        }
+        .data-item-b {
+          display: block;
+          position: relative;
+          overflow: hidden;
+          border-radius: 15px;
+          background: #fff;
+          border: 2px solid #fff;
+          box-shadow: 0 1px 3px rgba(50, 50, 93, 0.15),
+            0 1px 0 rgba(0, 0, 0, 0.02);
+
+          img {
+            height: 100%;
+            vertical-align: super;
+          }
+          .fav,
+          .add {
+            position: absolute;
+            content: "";
+            right: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          .fav {
+            top: 0;
+            padding: 5px 7px;
+            margin: 5px;
+            border-radius: 8px;
+            background: rgba(0, 0, 0, 0.1);
+            font-size: 12px;
+          }
+          .add {
+            bottom: 0;
+            padding: 5px 11px;
+            margin: 0 15px 35px 0;
+            border-radius: 15px;
+            background: rgba(0, 0, 0, 0.1);
+          }
+          .short-desc {
+            position: absolute;
+            content: "";
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            padding: 6px;
+            background: -webkit-gradient(
+              linear,
+              left top,
+              left bottom,
+              from(transparent),
+              to(#fff)
+            );
+            background: linear-gradient(to bottom, transparent, #fff);
+            .rating {
+              font-size: 10px;
+              color: #e6f2ff;
+            }
+            .title {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              h6 {
+                font-size: 10px;
+                margin-top: 0;
+                margin-bottom: 0;
+                line-height: 1.5;
+              }
+            }
+          }
+        }
+      }
+    }
+    .item .sc-ion-label-md-h,
+    .item .sc-ion-label-ios-h {
+      color: #000;
+    }
+  }
+  //Following classes display/hide the 'menu'
+  // based on the state change detection in the
+  // component class
+  .active {
+    display: block;
+  }
+
+  .inactive {
+    display: none;
+  }
+}
+ion-footer {
+  .footer {
+    .plus-minus-input {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      align-items: center;
+      margin-top: 5px;
+
+      .input-group-field {
+        text-align: center;
+        margin: 0 2rem;
+        padding: 1rem;
+        border: none;
+        width: 50%;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 4px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+        &::-webkit-inner-spin-button,
+        ::-webkit-outer-spin-button {
+          appearance: none;
+        }
+      }
+
+      .circle {
+        background: #e6f2ff;
+        color: #fff;
+        position: absolute;
+        content: "";
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+      }
+      .left {
+        left: 20%;
+      }
+      .right {
+        right: 20%;
+      }
+      ion-icon {
+        font-size: 16px;
+        color: #b3b3b3;
+      }
+    }
+    .btn-primary {
+      color: #fff;
+      background: #934bea;
+    }
+  }
+}
+// For Individual Module Customization Use This CSS
+// Its A Clone Style Of Global CSS
+@import "~../../../../ambulance.scss";
+///////////////////////////////////////////////////

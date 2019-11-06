@@ -1,0 +1,84 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <div class="toolbar-title">
+      <div class="title">
+        <h1>
+          My account
+        </h1>
+      </div>
+    </div>
+    <ion-buttons slot="end">
+      <ion-button shape="round" fill="solid" size="small" [routerLink]="['/profile-edit']">
+        <ion-icon slot="start" name="create" mode="md"></ion-icon>
+        Edit
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="page-profile ion-padding">
+  <div class="wrapper">
+    <div class="wrapper-header">
+      <div class="img-blc">
+        <img src="../../../assets/client-03.jpg" alt="" srcset="">
+        <span></span>
+        <span></span>
+      </div>
+      <div class="change">
+        <button class="btn btn-round btn-primary">Change</button>
+      </div>
+    </div>
+    <div class="wrapper-content">
+      <div class="wrapper-list">
+        <ion-text>
+          <h4 class="bold">Emily Hunt</h4>
+          <p>New York</p>
+          <p>USA</p>
+        </ion-text>
+      </div>
+      <div class="wrapper-list">
+        <ion-text>
+          <h6>(123) 123456</h6>
+          <p>sarahlovelygirl@example.com</p>
+        </ion-text>
+      </div>
+    </div>
+  </div>
+  <div class="wrapper">
+    <div class="wrapper-title">
+      <h5>
+        <span class="ion-text-uppercase bold">Address</span>
+        <span class="ion-float-right">Add/Manage</span>
+      </h5>
+    </div>
+    <div class="wrapper-content">
+      <ion-slides pager="false" [options]="sliderSmall" #slider>
+
+        <ion-slide class="wrapper-blk">
+          <h6 class="bold">Home</h6>
+          <span>865 Manhatton St</span>
+          <span>New Rochelle</span>
+          <span>NY 10801</span>
+        </ion-slide>
+
+        <ion-slide class="wrapper-blk">
+          <h6 class="bold">Home</h6>
+          <span>865 Manhatton St</span>
+          <span>New Rochelle</span>
+          <span>NY 10801</span>
+        </ion-slide>
+
+        <ion-slide class="wrapper-blk">
+          <h6 class="bold">Home</h6>
+          <span>865 Manhatton St</span>
+          <span>New Rochelle</span>
+          <span>NY 10801</span>
+        </ion-slide>
+
+      </ion-slides>
+    </div>
+  </div>
+</ion-content>

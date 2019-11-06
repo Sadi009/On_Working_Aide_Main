@@ -1,0 +1,41 @@
+ion-content {
+  ion-card {
+    background: #ffffff;
+    border-radius: 5px;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 16px;
+    z-index: 999;
+  }
+  input[type="radio"] {
+    display: none;
+  }
+  input[type="radio"]:checked + .button-label {
+    background: linear-gradient(315deg, #7c8ce9 0%, #5e72e4 74%);
+    color: #fff;
+  }
+  .button-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 100%;
+    color: #000;
+    font-size: 14px;
+    font-weight: lighter;
+    text-transform: capitalize;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+    transition: 0.3s;
+    user-select: none;
+  }
+  .booking-btn {
+    .btn {
+      width: 100%;
+      box-shadow: 0 12px 30px -14px #5e72e4;
+    }
+  }
+}
+@import "~../../../../../doctor.scss";

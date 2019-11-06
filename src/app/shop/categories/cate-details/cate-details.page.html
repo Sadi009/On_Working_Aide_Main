@@ -1,0 +1,303 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title text-capitalize>
+      <b>women's</b> clothing & style
+      <br>
+      <span>shari</span>
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/shop/cart']">
+        <ion-icon slot="start" name="basket"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="page-details ion-padding">
+
+  <section class="wrapper-slider">
+    <div class="wrapper">
+      <div class="wrapper-content">
+        <ion-slides pager="true" [options]="cateSlide" #slider>
+          <ion-slide class="wrapper-blk">
+            <img src="../../../../assets/shop/cate4.jpg" alt="" srcset="">
+          </ion-slide>
+          <ion-slide class="wrapper-blk">
+            <img src="../../../../assets/shop/cate4.jpg" alt="" srcset="">
+          </ion-slide>
+          <ion-slide class="wrapper-blk">
+            <img src="../../../../assets/shop/cate4.jpg" alt="" srcset="">
+          </ion-slide>
+        </ion-slides>
+      </div>
+    </div>
+  </section>
+
+  <section class="product-details">
+    <ion-row>
+      <ion-col col-12>
+        <div class="product-title ion-text-capitalize">
+          <h4>Lorem ipsum dolor sit amet
+            <span class="ion-float-right">10% off</span>
+          </h4>
+          <h4 class="price">
+            Tk-1800
+          </h4>
+        </div>
+      </ion-col>
+    </ion-row>
+    <div class="toggle-btn">
+      <button (click)="toggleAccordion()" class="btn btn-round">
+        <i class="material-icons" *ngIf="isMenuOpen">
+          expand_less
+        </i>
+        <i class="material-icons" *ngIf="!isMenuOpen">
+          expand_more
+        </i>
+      </button>
+    </div>
+    <div [ngClass]="this.isMenuOpen ? 'active' : 'inactive'" class="description">
+      <div class="wrapper">
+        <div class="wrap-title">
+          <h4>Description</h4>
+        </div>
+        <div class="product-description">
+          <div class="content-box">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus a voluptate ad mollitia porro eius,
+              quidem at quae minima voluptates.</p>
+            <div class="divider-space-text"></div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, quisquam.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="wrapper">
+        <div class="wrap-title">
+          <h4 class="">Product Information</h4>
+        </div>
+        <div class="product-information">
+          <div class="content-box">
+            <ion-list>
+              <ion-item>
+                <ion-label>Condition
+                  <span>New</span>
+                </ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>Weight
+                  <span>100 gr</span>
+                </ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>Categories
+                  <span>Fashion</span>
+                </ion-label>
+              </ion-item>
+            </ion-list>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper cate-details">
+        <div class="wrap-title">
+          <h4>Related Product</h4>
+        </div>
+        <div class="data-list">
+          <div class="data-item" [routerLink]="['/shop/cate-details']">
+            <div class="data-item-b">
+              <img src="../../../assets/shop/cate4.jpg">
+              <div class="fav">
+                <ion-icon name="heart"></ion-icon>
+              </div>
+              <div class="add">
+                <ion-icon name="add"></ion-icon>
+              </div>
+              <div class="short-desc">
+                <div class="rating">
+                  <span>
+                    <ion-icon name="star"></ion-icon>
+                  </span>
+                  <span>
+                    <ion-icon name="star"></ion-icon>
+                  </span>
+                  <span>
+                    <ion-icon name="star"></ion-icon>
+                  </span>
+                  <span>
+                    <ion-icon name="star"></ion-icon>
+                  </span>
+                  <span>
+                    <ion-icon name="star"></ion-icon>
+                  </span>
+                </div>
+                <div class="title">
+                  <h6>Bala Aso ni</h6>
+                  <h6>TK-20000</h6>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="data-item">
+            <div class="data-item-b">
+              <img src="../../../assets/shop/cate5.jpg">
+              <div class="fav">
+                <ion-icon name="heart"></ion-icon>
+              </div>
+              <div class="add">
+                <ion-icon name="add"></ion-icon>
+              </div>
+              <div class="short-desc">
+                <div class="rating">
+                  <span>
+                    <ion-icon name="star"></ion-icon>
+                  </span>
+                  <span>
+                    <ion-icon name="star"></ion-icon>
+                  </span>
+                  <span>
+                    <ion-icon name="star"></ion-icon>
+                  </span>
+                  <span>
+                    <ion-icon name="star"></ion-icon>
+                  </span>
+                  <span>
+                    <ion-icon name="star"></ion-icon>
+                  </span>
+                </div>
+                <div class="title">
+                  <h6>Bala Aso ni</h6>
+                  <h6>TK-20000</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="data-item">
+            <div class="data-item-b">
+              <img src="../../../assets/shop/cate5.jpg">
+              <div class="fav">
+                <ion-icon name="heart"></ion-icon>
+              </div>
+              <div class="add">
+                <ion-icon name="add"></ion-icon>
+              </div>
+              <div class="short-desc">
+                <div class="rating">
+                  <span>
+                    <ion-icon name="star"></ion-icon>
+                  </span>
+                  <span>
+                    <ion-icon name="star"></ion-icon>
+                  </span>
+                  <span>
+                    <ion-icon name="star"></ion-icon>
+                  </span>
+                  <span>
+                    <ion-icon name="star"></ion-icon>
+                  </span>
+                  <span>
+                    <ion-icon name="star"></ion-icon>
+                  </span>
+                </div>
+                <div class="title">
+                  <h6>Bala Aso ni</h6>
+                  <h6>TK-20000</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="data-item">
+            <div class="data-item-b">
+              <img src="../../../assets/shop/cate5.jpg">
+              <div class="fav">
+                <ion-icon name="heart"></ion-icon>
+              </div>
+              <div class="add">
+                <ion-icon name="add"></ion-icon>
+              </div>
+              <div class="short-desc">
+                <div class="rating">
+                  <span>
+                    <ion-icon name="star"></ion-icon>
+                  </span>
+                  <span>
+                    <ion-icon name="star"></ion-icon>
+                  </span>
+                  <span>
+                    <ion-icon name="star"></ion-icon>
+                  </span>
+                  <span>
+                    <ion-icon name="star"></ion-icon>
+                  </span>
+                  <span>
+                    <ion-icon name="star"></ion-icon>
+                  </span>
+                </div>
+                <div class="title">
+                  <h6>Bala Aso ni</h6>
+                  <h6>TK-20000</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- <section class="footer">
+    <div class="card">
+      <div class="card-content">
+        <ion-row>
+          <ion-col size=6>
+            <div class="plus-minus-input">
+              <button type="button" class="circle left" (click)="countMinus()">
+                <ion-icon slot="start" name="remove"></ion-icon>
+              </button>
+              <input class="input-group-field" type="number" name="quantity" value="{{clickCounter}}">
+              <button type="button" class="circle right" (click)="countPlus()">
+                <ion-icon slot="end" name="add"></ion-icon>
+              </button>
+            </div>
+          </ion-col>
+          <ion-col size=6>
+            <button class="btn btn-round btn-primary">
+              Add to bag
+            </button>
+          </ion-col>
+        </ion-row>
+      </div>
+    </div>
+  </section> -->
+</ion-content>
+<ion-footer no-border>
+  <ion-toolbar>
+    <div class="footer">
+      <div class="card">
+        <div class="card-content">
+          <ion-row>
+            <ion-col size=6>
+              <div class="plus-minus-input">
+                <button type="button" class="circle left" (click)="countMinus()">
+                  <ion-icon slot="start" name="remove"></ion-icon>
+                </button>
+                <input class="input-group-field" type="number" name="quantity" value="{{clickCounter}}">
+                <button type="button" class="circle right" (click)="countPlus()">
+                  <ion-icon slot="end" name="add"></ion-icon>
+                </button>
+              </div>
+            </ion-col>
+            <ion-col size=6>
+              <button class="btn btn-round btn-primary">
+                Add to bag
+              </button>
+            </ion-col>
+          </ion-row>
+        </div>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-footer>

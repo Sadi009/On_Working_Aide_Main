@@ -1,0 +1,57 @@
+<ion-header no-border>
+  <ion-toolbar [class.show-background]="showToolbar">
+    <ion-buttons slot="start">
+      <ion-menu-button>
+        <button class="menu-bar"></button>
+      </ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button shape="round" fill="solid" size="small">
+        <ion-icon slot="start" name="log-out" mode="ios"></ion-icon>
+        Sign out
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="page-my-account ion-padding">
+  <div class="wrapper">
+    <div class="wrapper-header">
+      <div class="img-blc">
+        <img src="../../../assets/client-03.jpg" alt="" srcset="">
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <ion-item>
+      <ion-icon color="primary" slot="start" name="reorder"></ion-icon>
+      <ion-label>View My orders</ion-label>
+      <ion-icon sloat="end" name="arrow-forward" mode="ios"></ion-icon>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon color="secondary" slot="start" name="lock" mode="ios"></ion-icon>
+      <ion-label>Locate all store</ion-label>
+      <ion-icon sloat="end" name="arrow-forward" mode="ios"></ion-icon>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon color="medium" slot="start" name="person"></ion-icon>
+      <ion-label>Profile</ion-label>
+      <ion-icon sloat="end" name="arrow-forward" mode="ios"></ion-icon>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon color="success" slot="start" name="settings"></ion-icon>
+      <ion-label>settings</ion-label>
+      <ion-icon sloat="end" name="arrow-forward" mode="ios"></ion-icon>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon color="tertiary" slot="start" name="help-circle"></ion-icon>
+      <ion-label>terms & condition</ion-label>
+      <ion-icon sloat="end" name="arrow-forward" mode="ios"></ion-icon>
+    </ion-item>
+  </div>
+</ion-content>
