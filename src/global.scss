@@ -54,7 +54,7 @@ small {
 //---------------- Custom Title --------------------//
 .wrapper-title {
   h5 {
-    font-size: 16px !important;
+    font-size: 14px !important;
     span:nth-child(2) {
       color: #999;
     }
@@ -105,25 +105,6 @@ ion-header {
     }
   }
 }
-
-//---------------------------------------------//
-//-------------- Custom Footer ---------------//
-ion-footer {
-  .footer {
-    .card {
-      display: block;
-      width: calc(100% - 20px);
-      margin: 10px;
-      margin-top: 0 !important;
-      padding: 10px;
-      overflow: hidden;
-      border-radius: 15px;
-      background: rgba(255, 255, 255, 0.98);
-      box-shadow: 0 1px 3px rgba(50, 50, 93, 0.15), 0 1px 0 rgba(0, 0, 0, 0.02);
-    }
-  }
-}
-
 //---------------------------------------------//
 //------------- custom animation -------------//
 #stars {
@@ -695,7 +676,7 @@ ion-footer {
   margin-top: -10px;
   width: 22px;
   height: 2px;
-  background: #934bea;
+  background: #fff;
   position: relative;
 }
 .menu-bar::before {
@@ -705,7 +686,7 @@ ion-footer {
   top: 6px;
   width: 15px;
   height: 2px;
-  background: #934bea;
+  background: #fff;
 }
 .menu-bar::after {
   position: absolute;
@@ -714,7 +695,7 @@ ion-footer {
   top: 12px;
   width: 22px;
   height: 2px;
-  background: #934bea;
+  background: #fff;
 }
 
 //----------------------------------------------//
@@ -774,6 +755,12 @@ ion-footer {
 .btn-primary {
   color: #fff;
   background: linear-gradient(315deg, #7c8ce9 0%, #5e72e4 74%);
+  box-shadow: 0 12px 30px -14px #5e72e4;
+}
+.btn-danger {
+  color: #fff;
+  background: #f04141;
+  box-shadow: 0 12px 30px -14px #f04141;
 }
 // --------------------------------------------//
 .action-sheet-button-inner.sc-ion-action-sheet-md {
@@ -791,7 +778,7 @@ ion-footer {
 .page-checkout {
   .mat-stepper-horizontal,
   .mat-stepper-vertical {
-    background-color: none;
+    background-color: transparent;
     background: none;
   }
   .mat-horizontal-stepper-header-container {
@@ -879,7 +866,33 @@ ion-footer {
 .item .sc-ion-label-ios-h {
   color: #666;
 }
-
+//--------------------------------------------------//
+//---------------- Custom Header ------------------//
+// ion-content {
+//   --background: #f7fafc;
+// }
+// ion-header {
+//   ion-toolbar {
+//     --background: #5e72e4;
+//     --background: linear-gradient(315deg, #934bea 0%, #5e72e483 74%);
+//     color: #fff;
+//     padding-top: 0 !important;
+//     padding-bottom: 0 !important;
+//     ion-title {
+//       text-align: center;
+//     }
+//     .searchbar-input.sc-ion-searchbar-md {
+//       border-radius: 20px;
+//       font-size: 14px;
+//       color: #000;
+//       box-shadow: none;
+//       width: 100%;
+//     }
+//     ion-back-button {
+//       position: absolute;
+//     }
+//   }
+// }
 /* Core CSS required for Ionic components to work properly */
 @import "~@ionic/angular/css/core.css";
 

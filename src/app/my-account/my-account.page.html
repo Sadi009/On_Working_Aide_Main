@@ -1,9 +1,7 @@
 <ion-header no-border>
   <ion-toolbar [class.show-background]="showToolbar">
     <ion-buttons slot="start">
-      <ion-menu-button>
-        <button class="menu-bar"></button>
-      </ion-menu-button>
+      <ion-back-button defaultHref="home"></ion-back-button>
     </ion-buttons>
     <ion-buttons slot="end">
       <ion-button shape="round" fill="solid" size="small">
@@ -24,15 +22,15 @@
       </div>
     </div>
 
-    <ion-item>
+    <ion-item [routerLink]="['/shop/my-orders']">
       <ion-icon color="primary" slot="start" name="reorder"></ion-icon>
       <ion-label>View My orders</ion-label>
       <ion-icon sloat="end" name="arrow-forward" mode="ios"></ion-icon>
     </ion-item>
 
-    <ion-item>
+    <ion-item [routerLink]="['/global-user/appointments']">
       <ion-icon color="secondary" slot="start" name="lock" mode="ios"></ion-icon>
-      <ion-label>Locate all store</ion-label>
+      <ion-label>My appointments</ion-label>
       <ion-icon sloat="end" name="arrow-forward" mode="ios"></ion-icon>
     </ion-item>
 

@@ -5,10 +5,8 @@
     </ion-buttons>
     <ion-searchbar placeholder="Search For Anything....">
     </ion-searchbar>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content>
+  </ion-toolbar>
   <section class="cate-level">
     <div class="wrapper">
       <div class="wrapper-title">
@@ -54,8 +52,13 @@
       </div>
     </div>
   </section>
+</ion-header>
+
+<ion-content>
+
   <section [ngSwitch]="cateDetails" class="cate-details ion-padding">
     <div *ngSwitchCase="'cloth'" class="data-list">
+
       <div class="data-item" [routerLink]="['/shop/cate-details']">
         <div class="data-item-b">
           <img src="../../../assets/shop/cate4.jpg">
@@ -89,8 +92,8 @@
             </div>
           </div>
         </div>
-
       </div>
+
       <div class="data-item">
         <div class="data-item-b">
           <img src="../../../assets/shop/cate5.jpg">
@@ -125,7 +128,148 @@
           </div>
         </div>
       </div>
+
+      <div class="data-item" [routerLink]="['/shop/cate-details']">
+        <div class="data-item-b">
+          <img src="../../../assets/shop/cate4.jpg">
+          <div class="fav">
+            <ion-icon name="heart"></ion-icon>
+          </div>
+          <div class="add">
+            <ion-icon name="cart"></ion-icon>
+          </div>
+          <div class="short-desc">
+            <!-- <div class="rating">
+              <span>
+                <ion-icon name="star"></ion-icon>
+              </span>
+              <span>
+                <ion-icon name="star"></ion-icon>
+              </span>
+              <span>
+                <ion-icon name="star"></ion-icon>
+              </span>
+              <span>
+                <ion-icon name="star"></ion-icon>
+              </span>
+              <span>
+                <ion-icon name="star"></ion-icon>
+              </span>
+            </div> -->
+            <div class="title">
+              <h6>Bala Aso ni</h6>
+              <h6>TK-20000</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-item" [routerLink]="['/shop/cate-details']">
+        <div class="data-item-b">
+          <img src="../../../assets/shop/cate4.jpg">
+          <div class="fav">
+            <ion-icon name="heart"></ion-icon>
+          </div>
+          <div class="add">
+            <ion-icon name="cart"></ion-icon>
+          </div>
+          <div class="short-desc">
+            <!-- <div class="rating">
+              <span>
+                <ion-icon name="star"></ion-icon>
+              </span>
+              <span>
+                <ion-icon name="star"></ion-icon>
+              </span>
+              <span>
+                <ion-icon name="star"></ion-icon>
+              </span>
+              <span>
+                <ion-icon name="star"></ion-icon>
+              </span>
+              <span>
+                <ion-icon name="star"></ion-icon>
+              </span>
+            </div> -->
+            <div class="title">
+              <h6>Bala Aso ni</h6>
+              <h6>TK-20000</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-item" [routerLink]="['/shop/cate-details']">
+        <div class="data-item-b">
+          <img src="../../../assets/shop/cate4.jpg">
+          <div class="fav">
+            <ion-icon name="heart"></ion-icon>
+          </div>
+          <div class="add">
+            <ion-icon name="cart"></ion-icon>
+          </div>
+          <div class="short-desc">
+            <!-- <div class="rating">
+              <span>
+                <ion-icon name="star"></ion-icon>
+              </span>
+              <span>
+                <ion-icon name="star"></ion-icon>
+              </span>
+              <span>
+                <ion-icon name="star"></ion-icon>
+              </span>
+              <span>
+                <ion-icon name="star"></ion-icon>
+              </span>
+              <span>
+                <ion-icon name="star"></ion-icon>
+              </span>
+            </div> -->
+            <div class="title">
+              <h6>Bala Aso ni</h6>
+              <h6>TK-20000</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-item" [routerLink]="['/shop/cate-details']">
+        <div class="data-item-b">
+          <img src="../../../assets/shop/cate4.jpg">
+          <div class="fav">
+            <ion-icon name="heart"></ion-icon>
+          </div>
+          <div class="add">
+            <ion-icon name="cart"></ion-icon>
+          </div>
+          <div class="short-desc">
+            <!-- <div class="rating">
+              <span>
+                <ion-icon name="star"></ion-icon>
+              </span>
+              <span>
+                <ion-icon name="star"></ion-icon>
+              </span>
+              <span>
+                <ion-icon name="star"></ion-icon>
+              </span>
+              <span>
+                <ion-icon name="star"></ion-icon>
+              </span>
+              <span>
+                <ion-icon name="star"></ion-icon>
+              </span>
+            </div> -->
+            <div class="title">
+              <h6>Bala Aso ni</h6>
+              <h6>TK-20000</h6>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
     <div *ngSwitchCase="'shari'" class="data-list">
       <div class="data-item">
         <div class="data-item-b">

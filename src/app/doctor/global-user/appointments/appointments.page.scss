@@ -1,0 +1,58 @@
+ion-content {
+  .appointments {
+    .sc-ion-card-md-h,
+    .sc-ion-card-ios-h {
+      position: relative;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      margin-bottom: 16px;
+      border-radius: 5px;
+      box-shadow: none;
+      background: #fff;
+      ion-item {
+        --min-height: auto;
+        --inner-border-width: 0;
+        --background: transparent;
+      }
+    }
+    ion-thumbnail {
+      position: relative;
+      margin-top: 8px;
+      margin-bottom: 8px;
+      height: 50px;
+      width: 50px;
+      overflow: hidden;
+      border-radius: 50%;
+    }
+    ion-card::after {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 8px;
+      height: 50px;
+      width: 3px;
+      border-radius: 50px;
+      background: #5e72e4;
+    }
+    .content-text {
+      text-transform: capitalize;
+      padding-inline-start: 16px;
+      h6 {
+        margin-top: 2px;
+        margin-bottom: 2px;
+      }
+      .name {
+        h6 {
+          font-weight: 600;
+        }
+      }
+      .time {
+        h6 {
+          font-size: 14px;
+          color: #999999;
+        }
+      }
+    }
+  }
+}
+@import "node_modules/../../../doctor.scss";

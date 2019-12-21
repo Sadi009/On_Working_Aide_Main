@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Profile Edit</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="wrapper">
+    <div class="wrapper-header">
+      <div class="img-blc">
+        <img src="../../../assets/client-03.jpg" alt="" srcset="">
+        <span></span>
+      </div>
+      <div class="change">
+        <button class="btn btn-round btn-primary">Change</button>
+      </div>
+    </div>
+  </div>
+  <form>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label position="floating">Name</ion-label>
+          <ion-input type="name" name="name" required>
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Category</ion-label>
+          <ion-input type="name" name="name" required>
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">About</ion-label>
+          <ion-textarea type="name" name="name" required></ion-textarea>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Phone Number</ion-label>
+          <ion-input type="number" name="number" required>
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Certificate</ion-label>
+          <ion-input type="text" name="text" required>
+          </ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <div class="login-btn">
+          <button class="btn btn-round btn-primary">
+            Update All
+          </button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </form>
+
+</ion-content>

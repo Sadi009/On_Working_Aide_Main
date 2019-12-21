@@ -1,0 +1,91 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Appointment Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <section class="appointments">
+
+    <ion-card class="shadow-md">
+      <ion-item>
+        <ion-thumbnail slot="start">
+          <img src="../../../../../assets/client-03.jpg">
+        </ion-thumbnail>
+        <div class="content-text">
+          <div class="user-name">
+            <h6>John Papa</h6>
+          </div>
+          <div class="user-location">
+            <small>Sylhet, Bangladesh</small>
+          </div>
+        </div>
+        <div class="spinner" slot="end">
+          <ion-spinner name="lines"></ion-spinner>
+        </div>
+      </ion-item>
+    </ion-card>
+
+    <div class="description">
+
+      <ion-card class="shadow-md">
+        <ion-card-title>Patient Name:</ion-card-title>
+        <ion-card-content>
+          John Doe
+        </ion-card-content>
+        <ion-card-title>Relation With User:</ion-card-title>
+        <ion-card-content>
+          Brother
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card class="shadow-md">
+        <ion-card-title>Appointment Time:</ion-card-title>
+        <ion-card-content>
+          11:00 AM - 12:00 pm
+        </ion-card-content>
+        <ion-card-title>Appointment Date:</ion-card-title>
+        <ion-card-content>
+          27 Novembar 2019
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card class="shadow-md">
+        <ion-card-title>Appointment Location:</ion-card-title>
+        <ion-card-content>
+          127 - Sylhet Sadar, Sylhet Bangladesh
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card class="shadow-md">
+        <ion-card-title>Details:</ion-card-title>
+        <ion-card-content>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum eveniet quaerat earum est similique,
+          voluptatibus nulla recusandae, voluptas, pariatur quod repellat! Voluptate alias quia tempora commodi iusto
+          accusamus nesciunt fuga.
+        </ion-card-content>
+      </ion-card>
+
+    </div>
+
+    <div class="booking-btn ion-padding-bottom">
+      <ion-row>
+        <ion-col size="6">
+          <button class="btn btn-round btn-primary">
+            approve
+          </button>
+        </ion-col>
+        <ion-col size="6">
+          <button class="btn btn-round btn-danger">
+            reject
+          </button>
+        </ion-col>
+      </ion-row>
+    </div>
+  </section>
+
+</ion-content>

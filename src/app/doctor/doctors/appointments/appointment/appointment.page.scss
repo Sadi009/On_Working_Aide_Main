@@ -1,0 +1,73 @@
+ion-content {
+  .appointments {
+    .sc-ion-card-md-h,
+    .sc-ion-card-ios-h {
+      position: relative;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      margin-bottom: 16px;
+      border-radius: 5px;
+      box-shadow: none;
+      background: #fff;
+      ion-item {
+        --min-height: auto;
+        --inner-border-width: 0;
+        --background: transparent;
+      }
+    }
+    ion-thumbnail {
+      margin-top: 8px;
+      margin-bottom: 8px;
+      height: 50px;
+      width: 50px;
+      overflow: hidden;
+      border-radius: 50%;
+    }
+    ion-card::after {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 3px;
+      border-radius: 50px;
+      background: #5e72e4;
+    }
+    .spinner {
+      position: relative;
+    }
+    .content-text {
+      text-transform: capitalize;
+      h6 {
+        margin-top: 2px;
+        margin-bottom: 2px;
+      }
+      small {
+        color: #999999;
+      }
+    }
+    .description {
+      .sc-ion-card-md-h,
+      .sc-ion-card-ios-h {
+        padding: 10px;
+        padding-inline-start: 16px;
+      }
+      ion-card-title {
+        font-size: 16px;
+        --color: #737373;
+      }
+      .card-content-md,
+      .card-content-ios {
+        padding: 0;
+        margin: 5px 0;
+        font-size: 14px;
+      }
+    }
+  }
+  .booking-btn {
+    .btn {
+      width: 100%;
+    }
+  }
+}
+@import "node_modules/../../../../doctor.scss";

@@ -1,22 +1,22 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LocalUserPage } from './local-user.page';
+import { AccountSettingPage } from './account-setting.page';
 
-describe('LocalUserPage', () => {
-  let component: LocalUserPage;
-  let fixture: ComponentFixture<LocalUserPage>;
+describe('AccountSettingPage', () => {
+  let component: AccountSettingPage;
+  let fixture: ComponentFixture<AccountSettingPage>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LocalUserPage ],
+      declarations: [ AccountSettingPage ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LocalUserPage);
+    fixture = TestBed.createComponent(AccountSettingPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

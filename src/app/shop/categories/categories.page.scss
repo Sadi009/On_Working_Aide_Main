@@ -1,14 +1,44 @@
-ion-toolbar {
-  // --------------- Custom Searchbar --------------//
-  .searchbar-input.sc-ion-searchbar-md {
-    background: rgba(#00cccc, 0.1);
+ion-header {
+  background: #e6f2ff;
+  ion-toolbar {
+    --background: transparent !important;
+  }
+  .cate-level {
+    .wrapper {
+      box-shadow: 0 5px 10px rgba(85, 7, 205, 0.15);
+      .wrapper-title {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        h1 {
+          margin: 0;
+          font-family: sans-serif;
+          font-weight: 800;
+        }
+        .select {
+          display: block;
+          background: #fff;
+          border-radius: 50px;
+          padding: 0 20px;
+        }
+      }
+      .wrapper-content {
+        .sc-ion-segment-md-h,
+        .sc-ion-segment-ios-h {
+          --color-checked: #85e0e0;
+          --ripple-color: transparent;
+          --background-hover: transparent;
+        }
+      }
+    }
   }
 }
 ion-content {
   .cate-level {
     .wrapper {
       background: #e6f2ff;
-      box-shadow: 0 5px 10px rgba(85, 7, 205, 0.15);
+      box-shadow: 0 15px 15px -15px rgba(85, 7, 205, 0.15);
       .wrapper-title {
         display: flex;
         flex-direction: row;

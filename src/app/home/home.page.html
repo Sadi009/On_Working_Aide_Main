@@ -5,6 +5,8 @@
         <button class="menu-bar"></button>
       </ion-menu-button>
     </ion-buttons>
+    <ion-searchbar placeholder="Find something....." inputmode="email" type="decimal" [debounce]="250">
+    </ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
@@ -62,59 +64,16 @@
             </div>
           </ion-col>
         </ion-row>
-        <!-- <ion-slides pager="false" [options]="slideOpts" #slide>
-          <ion-slide>
-            <div class="b-content" float-right>
-              <div class="b-icon i-bg-1">
-                <img src="../../assets/icon/home/home-1.png" />
-              </div>
-              <div class="b-desc">
-                <h4>Doctor</h4>
-              </div>
-            </div>
-          </ion-slide>
-          <ion-slide>
-            <div class="b-content" [routerLink]="['/decide']" routerLinkActive="router-link-active">
-              <div class="b-icon i-bg-2">
-                <img src="../../assets/icon/home/home-2.png" />
-              </div>
-              <div class="b-desc">
-                <h4>Shop</h4>
-              </div>
-            </div>
-          </ion-slide>
-          <ion-slide>
-            <div class="b-content" float-right>
-              <div class="b-icon i-bg-3">
-                <img src="../../assets/icon/home/home-3.png" />
-              </div>
-              <div class="b-desc">
-                <h4>Hospital</h4>
-              </div>
-            </div>
-          </ion-slide>
-          <ion-slide>
-            <div class="b-content">
-              <div class="b-icon i-bg-4">
-                <img src="../../assets/icon/home/home-4.png" />
-              </div>
-              <div class="b-desc">
-                <h4>Ambulance</h4>
-              </div>
-            </div>
-          </ion-slide>
-        </ion-slides> -->
       </div>
       <div id="stars"></div>
       <div id="stars2"></div>
       <div id="stars3"></div>
     </ion-card>
-    <!-- <div class="bg-shape">
-      <img src="../../assets/bg/bg-wave-1.png">
-    </div> -->
   </section>
+
   <div class="shop ion-padding">
-    <section class="flash-sale">
+
+    <section class="flash-sale ion-padding-bottom">
       <div class="wrapper">
         <div class="wrapper-title">
           <h5>
@@ -137,7 +96,8 @@
         </div>
       </div>
     </section>
-    <section class="trending">
+
+    <section class="trending ion-padding-bottom">
       <div class="wrapper">
         <div class="wrapper-title">
           <h5>

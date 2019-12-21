@@ -1,9 +1,7 @@
 <ion-header no-border>
   <ion-toolbar [class.show-background]="showToolbar">
     <ion-buttons slot="start">
-      <ion-menu-button>
-        <button class="menu-bar"></button>
-      </ion-menu-button>
+      <ion-back-button defaultHref="home"></ion-back-button>
     </ion-buttons>
     <ion-buttons slot="end">
       <ion-button shape="round" fill="solid" size="small" [routerLink]="['/profile-edit']">

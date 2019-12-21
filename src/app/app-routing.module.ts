@@ -4,18 +4,20 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
+    loadChildren: './tabs/tabs.module#TabsPageModule'
   },
-  {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
-  },
+  // {
+  //   path: '',
+  //   redirectTo: 'home',
+  //   pathMatch: 'full'
+  // },
+  // {
+  //   path: 'home',
+  //   loadChildren: './home/home.module#HomePageModule'
+  // },
   { path: 'log-in', loadChildren: './auth/log-in/log-in.module#LogInPageModule' },
   { path: 'sign-up', loadChildren: './auth/sign-up/sign-up.module#SignUpPageModule' },
   { path: 'decide', loadChildren: './auth/decide/decide.module#DecidePageModule' },
-  { path: 'my-account', loadChildren: './my-account/my-account.module#MyAccountPageModule' },
-  { path: 'my-profile', loadChildren: './my-profile/my-profile.module#MyProfilePageModule' },
   { path: 'profile-edit', loadChildren: './my-profile/profile-edit/profile-edit.module#ProfileEditPageModule' },
   {
     path: 'shop',
@@ -40,6 +42,10 @@ const routes: Routes = [
         path: 'checkout',
         loadChildren: './shop/categories/cart/checkout/checkout.module#CheckoutPageModule'
       },
+      {
+        path: 'my-orders',
+        loadChildren: './shop/my-orders/my-orders.module#MyOrdersPageModule'
+      }
     ]
   },
 
@@ -88,18 +94,59 @@ const routes: Routes = [
       {
         path: 'reviewer',
         loadChildren: './doctor/global-user/doctor-profile/reviewer/reviewer.module#ReviewerPageModule'
+      },
+      {
+        path: 'appointments',
+        loadChildren: './doctor/global-user/appointments/appointments.module#AppointmentsPageModule'
+      },
+      {
+        path: 'appointment',
+        loadChildren: './doctor/global-user/appointments/appointment/appointment.module#AppointmentPageModule'
       }
     ]
   },
   {
-    path: 'local-user',
+    path: 'doctors',
     children: [
       {
         path: '',
-        loadChildren: './doctor/local-user/local-user.module#LocalUserPageModule'
+        loadChildren: './doctor/doctors/doctors.module#DoctorsPageModule'
+      },
+      {
+        path: 'appointments',
+        loadChildren: './doctor/doctors/appointments/appointments.module#AppointmentsPageModule'
+      },
+      {
+        path: 'appointment',
+        loadChildren: './doctor/doctors/appointments/appointment/appointment.module#AppointmentPageModule'
+      },
+      {
+        path: 'address',
+        loadChildren: './doctor/doctors/address/address.module#AddressPageModule'
+      },
+      {
+        path: 'personal-info',
+        loadChildren: './doctor/doctors/personal-info/personal-info.module#PersonalInfoPageModule'
+      },
+      {
+        path: 'reviewer',
+        loadChildren: './doctor/doctors/reviewer/reviewer.module#ReviewerPageModule'
+      },
+      {
+        path: 'settings',
+        loadChildren: './doctor/doctors/settings/settings.module#SettingsPageModule'
+      },
+      {
+        path: 'profile-setting',
+        loadChildren: './doctor/doctors/settings/profile-setting/profile-setting.module#ProfileSettingPageModule'
+      },
+      {
+        path: 'account-setting',
+        loadChildren: './doctor/doctors/settings/account-setting/account-setting.module#AccountSettingPageModule'
       },
     ]
   },
+  // For Hospital Module //
   {
     path: 'hospital',
     children: [
@@ -113,7 +160,6 @@ const routes: Routes = [
       },
     ]
   },
-
 ];
 
 @NgModule({

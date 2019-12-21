@@ -54,37 +54,25 @@
       }
     }
   }
-  .footer {
-    .card {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: calc(100% - 20px);
-      margin: 10px;
-      padding: 10px;
-      overflow: hidden;
-      border-radius: 15px;
-      background: rgba(255, 255, 255, 0.98);
-      box-shadow: 0 4px 10px rgba(0, 30, 84, 0.12);
-      box-shadow: 0 5px 10px rgba($color: #5507cd, $alpha: 0.15);
-    }
-    .price {
-      h1 {
-        font-size: 18px;
-        font-family: monospace;
-        text-transform: uppercase;
-        text-align: center;
-        color: #000;
-        margin-top: 15px;
-        span {
-          color: #ff8765;
-          font-weight: bold;
-        }
+}
+ion-footer {
+  .price {
+    h1 {
+      font-size: 18px;
+      font-family: monospace;
+      text-transform: uppercase;
+      text-align: center;
+      color: #000;
+      margin-top: 15px;
+      span {
+        color: #ff8765;
+        font-weight: bold;
       }
     }
-    .btn-primary {
-      color: #fff;
-      background: #ff8765;
-    }
+  }
+  .btn-primary {
+    color: #fff;
+    background: #ff8765;
   }
 }
+@import "node_modules/../../../shop.global.scss";

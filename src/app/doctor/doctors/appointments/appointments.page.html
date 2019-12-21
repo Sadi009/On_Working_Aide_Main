@@ -1,0 +1,134 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>appointments</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="status">
+    <ion-card class="shadow-md">
+      <div class="wrapper">
+        <h1>
+          24
+        </h1>
+        <h6>
+          Today Appointment
+        </h6>
+        <p>
+          Novembar 23, 2019
+        </p>
+      </div>
+    </ion-card>
+  </div>
+
+  <div class="segment-button">
+    <ion-segment [(ngModel)]="details">
+      <ion-segment-button value="upcoming">
+        <ion-label>Upcoming</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="previous">
+        <ion-label>Previous</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <div [ngSwitch]="details" class="appointments">
+    <section *ngSwitchCase="'upcoming'">
+      <ion-card class="shadow-md" [routerLink]="['/doctors/appointment']">
+        <ion-item>
+          <div class="date" slot="start">
+            <h5>28</h5>
+            <small>Jun</small>
+          </div>
+          <ion-thumbnail slot="start">
+            <img src="../../../../assets/doctor/doctor5.png">
+          </ion-thumbnail>
+          <div class="content-text">
+            <div class="name">
+              <h6>periodic Health checks</h6>
+            </div>
+            <div class="time">
+              <h6>11:Am - 12:00 am</h6>
+            </div>
+            <div class="status">
+              <small color="danger">Pending</small>
+            </div>
+          </div>
+        </ion-item>
+      </ion-card>
+
+      <ion-card class="shadow-md">
+        <ion-item>
+          <div class="date" slot="start">
+            <h5>28</h5>
+            <small>Jun</small>
+          </div>
+          <ion-thumbnail slot="start">
+            <img src="../../../assets/doctor/doctor2.png">
+          </ion-thumbnail>
+          <div class="content-text">
+            <div class="name">
+              <h6>periodic Health checks</h6>
+            </div>
+            <div class="time">
+              <h6>11:Am - 12:00 am</h6>
+            </div>
+            <div class="status">
+              <small color="tertiary">Approved</small>
+            </div>
+          </div>
+        </ion-item>
+      </ion-card>
+    </section>
+    <section *ngSwitchCase="'previous'">
+      <ion-card class="shadow-md">
+        <ion-item>
+          <div class="date" slot="start">
+            <h5>28</h5>
+            <small>Jun</small>
+          </div>
+          <ion-thumbnail slot="start">
+            <img src="../../../assets/doctor/doctor3.png">
+          </ion-thumbnail>
+          <div class="content-text">
+            <div class="name">
+              <h6>periodic Health checks</h6>
+            </div>
+            <div class="time">
+              <h6>11:Am - 12:00 am</h6>
+            </div>
+            <div class="status">
+              <small color="tertiary">Approved</small>
+            </div>
+          </div>
+        </ion-item>
+      </ion-card>
+      <ion-card class="shadow-md">
+        <ion-item>
+          <div class="date" slot="start">
+            <h5>28</h5>
+            <small>Jun</small>
+          </div>
+          <ion-thumbnail slot="start">
+            <img src="../../../assets/doctor/doctor1.png">
+          </ion-thumbnail>
+          <div class="content-text">
+            <div class="name">
+              <h6>periodic Health checks</h6>
+            </div>
+            <div class="time">
+              <h6>11:Am - 12:00 am</h6>
+            </div>
+            <div class="status">
+              <small color="tertiary">Approved</small>
+            </div>
+          </div>
+        </ion-item>
+      </ion-card>
+    </section>
+  </div>
+
+</ion-content>

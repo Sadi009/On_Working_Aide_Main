@@ -3,6 +3,10 @@ ion-toolbar {
   position: absolute;
   width: 100%;
   padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  .searchbar-input.sc-ion-searchbar-md {
+    width: 90%;
+  }
 }
 ion-content {
   --background: #fff;
@@ -14,6 +18,7 @@ ion-content {
   }
   .module-selection {
     ion-card {
+      position: relative;
       text-align: center;
       margin: 0 !important;
       padding: 0 !important;
@@ -21,13 +26,11 @@ ion-content {
       height: auto;
       border-radius: 0;
       box-shadow: none;
-      // background: rgba(0, 0, 0, 0)
-      //   linear-gradient(45deg, #9368e9 0%, #943bea 100%) repeat scroll 0 0;
-      background: #e6f2ff;
+      background: linear-gradient(315deg, #934bea 0%, #5e72e4 74%);
       border-bottom-left-radius: 30px;
       border-bottom-right-radius: 30px;
       .b-position {
-        margin: 50px 0 10px;
+        margin: 60px 0 10px;
       }
       .b-content {
         display: flex;
@@ -37,11 +40,11 @@ ion-content {
         position: relative;
         padding: 10px 5px;
         background: rgba($color: #ffffff, $alpha: 1);
-        box-shadow: 0px 0px 5px -1px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+          0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
         border-radius: 5px;
         text-align: center;
         z-index: 999;
-
         .b-icon {
           border-radius: 50%;
           padding: 5px 6px;
@@ -65,7 +68,6 @@ ion-content {
           color: #666;
         }
       }
-
       .i-bg-1 {
         color: #f71735;
       }
@@ -90,7 +92,6 @@ ion-content {
   .flash-sale,
   .trending {
     .wrapper {
-      margin: 10px 0 20px 0;
       .wrapper-content {
         .wrapper-blk {
           position: relative;
