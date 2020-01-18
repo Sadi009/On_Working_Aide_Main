@@ -4,13 +4,6 @@
       <ion-back-button></ion-back-button>
     </ion-buttons>
     <ion-title>Doctor Profile</ion-title>
-    <!-- <div class="toolbar-title">
-      <div class="title">
-        <h1>
-          Doctor Profile
-        </h1>
-      </div>
-    </div> -->
   </ion-toolbar>
 </ion-header>
 
@@ -18,22 +11,22 @@
   <div class="wrapper ion-padding-bottom">
     <div class="wrapper-header">
       <div class="img-blc">
-        <img src="../../../assets/client-03.jpg" alt="" srcset="">
+        <img src="{{ doctor.img1 }}" alt="Porfile Pic" srcset="">
         <span></span>
       </div>
     </div>
     <div class="wrapper-content">
       <div class="wrapper-list">
         <ion-text>
-          <h5 class="bold">Emily Hunt</h5>
-          <small>Cardiologist</small>
+          <h5 class="bold">{{ doctor.doctor_name }}</h5>
+          <small>{{ doctor.specialist }}</small>
           <div class="review">
             <ion-icon name="star-outline"></ion-icon>
-            <h5><span>5.0</span> (234 reviewer)</h5>
+            <h5><span>{{ doctor.rating }}</span></h5>
           </div>
         </ion-text>
         <div class="booking-btn ion-padding-top">
-          <button class="btn btn-round btn-primary" [routerLink]="['/global-user/booking']"> book appointment
+          <button class="btn btn-round btn-primary" [routerLink]="['/global-user/booking', doctor]"> book appointment
           </button>
         </div>
       </div>
@@ -43,7 +36,7 @@
   <div class="wrapper ion-padding-top">
     <ion-item [routerLink]="['/global-user/personal-info']">
       <ion-icon color="primary" slot="start" name="reorder"></ion-icon>
-      <ion-label>Persolnal Information</ion-label>
+      <ion-label>Personal Information</ion-label>
       <ion-icon sloat="end" name="arrow-forward" mode="ios"></ion-icon>
     </ion-item>
 

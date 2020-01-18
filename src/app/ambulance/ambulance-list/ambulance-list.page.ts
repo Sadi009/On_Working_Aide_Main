@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Platform } from '@ionic/angular';
+import { AmbulanceService } from 'src/app/service/ambulance.service';
 
 @Component({
   selector: 'app-ambulance-list',
@@ -15,13 +16,18 @@ export class AmbulanceListPage implements OnInit {
     spaceBetween: 10,
     loop: false
   };
-  ambulanceList: string = "premium";
+  ambulanceList = [];
   isAndroid: boolean = false;
-  constructor(platform: Platform) {
+  constructor(platform: Platform, public ambulanceService: AmbulanceService) {
     this.isAndroid = platform.is('android');
   }
 
   ngOnInit() {
+    this.ambulanceService.getAllAmbulances().subscribe(ambulances => {
+      ambulances.forEach(element => {
+        console.log(element.data());
+        this.ambulanceList.push(element.data());
+      });
+    });
   }
-
 }

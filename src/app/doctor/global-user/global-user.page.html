@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-searchbar placeholder="Filter Pizza" inputmode="email" type="decimal" [debounce]="250"></ion-searchbar>
+    <ion-searchbar placeholder="Search Doctor" inputmode="text" type="text" [debounce]="250"></ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
@@ -32,123 +32,31 @@
   </section>
 
   <section class="doctor-list">
-    <ion-card class="shadow-md" [routerLink]="['/global-user/doctor-profile']">
+    <ion-card *ngFor="let doctor of doctorDetails" class="shadow-md" [routerLink]="['/global-user/doctor-profile', doctor]">
       <ion-item>
         <ion-thumbnail slot="start">
-          <img src="../../../assets/doctor/doctor1.png">
+          <img src="{{ doctor.img1 }}">
         </ion-thumbnail>
         <div class="content-text">
           <div class="name">
-            <h6>Jhon Doe</h6>
+            <h6>{{ doctor.doctor_name }}</h6>
           </div>
           <div class="type">
-            <small>cardiologist</small>
+            <small>{{ doctor.specialist }}</small>
           </div>
           <div class="location">
             <small>
               <ion-icon slot="start" name="pin"></ion-icon>
-              Mizan Tea Hospital
+              {{ doctor.address }}
             </small>
           </div>
         </div>
         <div class="content-info" slot="end">
           <div class="review">
             <ion-icon name="star-outline"></ion-icon>
-            5.0
+            {{ doctor.rating }}
           </div>
           <div class="more" (click)="presentPopover()">
-            <ion-icon slot="end" name="more"></ion-icon>
-          </div>
-        </div>
-      </ion-item>
-    </ion-card>
-
-    <ion-card class="shadow-md">
-      <ion-item>
-        <ion-thumbnail slot="start">
-          <img src="../../../assets/doctor/doctor2.png">
-        </ion-thumbnail>
-        <div class="content-text">
-          <div class="name">
-            <h6>Dr. Azharul Islam</h6>
-          </div>
-          <div class="type">
-            <small>Niggalogist</small>
-          </div>
-          <div class="location">
-            <small>
-              <ion-icon slot="start" name="pin"></ion-icon>
-              Mizan Tea Hospital
-            </small>
-          </div>
-        </div>
-        <div class="content-info" slot="end">
-          <div class="review">
-            <ion-icon name="star-outline"></ion-icon>
-            5.0
-          </div>
-          <div class="more">
-            <ion-icon slot="end" name="more"></ion-icon>
-          </div>
-        </div>
-      </ion-item>
-    </ion-card>
-
-    <ion-card class="shadow-md">
-      <ion-item>
-        <ion-thumbnail slot="start">
-          <img src="../../../assets/doctor/doctor3.png">
-        </ion-thumbnail>
-        <div class="content-text">
-          <div class="name">
-            <h6>Dr. Omar Faruki</h6>
-          </div>
-          <div class="type">
-            <small>Biri Specialist</small>
-          </div>
-          <div class="location">
-            <small>
-              <ion-icon slot="start" name="pin"></ion-icon>
-              Mizan Tea Hospital
-            </small>
-          </div>
-        </div>
-        <div class="content-info" slot="end">
-          <div class="review">
-            <ion-icon name="star-outline"></ion-icon>
-            5.0
-          </div>
-          <div class="more">
-            <ion-icon slot="end" name="more"></ion-icon>
-          </div>
-        </div>
-      </ion-item>
-    </ion-card>
-    <ion-card class="shadow-md">
-      <ion-item>
-        <ion-thumbnail slot="start">
-          <img src="../../../assets/doctor/doctor3.png">
-        </ion-thumbnail>
-        <div class="content-text">
-          <div class="name">
-            <h6>Dr. Tafu</h6>
-          </div>
-          <div class="type">
-            <small>Chira Specialist</small>
-          </div>
-          <div class="location">
-            <small>
-              <ion-icon slot="start" name="pin"></ion-icon>
-              Mizan Tea Hospital
-            </small>
-          </div>
-        </div>
-        <div class="content-info" slot="end">
-          <div class="review">
-            <ion-icon name="star-outline"></ion-icon>
-            5.0
-          </div>
-          <div class="more">
             <ion-icon slot="end" name="more"></ion-icon>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: 'app-details',
@@ -8,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class DetailsPage implements OnInit {
 
   public isMenuOpen: boolean = false;
+  details;
   clickCounter = 0;
   cateSlide = {
     initialSlide: 1,
@@ -21,12 +23,16 @@ export class DetailsPage implements OnInit {
     }
   };
 
-  constructor() { }
+
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.route.params.subscribe(params => {
+      this.details = params;
+    });
   }
+
   public toggleAccordion(): void {
     this.isMenuOpen = !this.isMenuOpen;
   }
-
 }

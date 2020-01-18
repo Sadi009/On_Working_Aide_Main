@@ -73,35 +73,11 @@
 
   <div class="shop ion-padding">
 
-    <section class="flash-sale ion-padding-bottom">
-      <div class="wrapper">
-        <div class="wrapper-title">
-          <h5>
-            <span class="ion-text-uppercase bold">Flash Sale</span>
-            <span class="ion-float-right">View All</span>
-          </h5>
-        </div>
-        <div class="wrapper-content">
-          <ion-slides pager="true" [options]="flashSlide" #slider>
-            <ion-slide class="wrapper-blk">
-              <img src="../../assets/shop/slide-1.jpg" alt="" srcset="">
-            </ion-slide>
-            <ion-slide class="wrapper-blk">
-              <img src="../../assets/shop/slide-2.jpg" alt="" srcset="">
-            </ion-slide>
-            <ion-slide class="wrapper-blk">
-              <img src="../../assets/shop/slide-3.jpg" alt="" srcset="">
-            </ion-slide>
-          </ion-slides>
-        </div>
-      </div>
-    </section>
-
     <section class="trending ion-padding-bottom">
       <div class="wrapper">
         <div class="wrapper-title">
           <h5>
-            <span class="ion-text-uppercase bold">trending</span>
+            <span class="ion-text-uppercase bold">Flash Sell</span>
             <span class="ion-float-right">View All</span>
           </h5>
         </div>
@@ -136,6 +112,44 @@
               <span class="level">
                 Demo
               </span>
+            </ion-slide>
+          </ion-slides>
+        </div>
+      </div>
+    </section>
+    
+    <section class="trending ion-padding-bottom">
+      <div class="wrapper">
+        <div class="wrapper-title">
+          <h5>
+            <span class="ion-text-uppercase bold">trending</span>
+            <span class="ion-float-right">View All</span>
+          </h5>
+        </div>
+        <div class="wrapper-content">
+          <ion-slides pager="false" *ngFor="let trend of trendingProducts" [options]="trendingSlide" #slider>
+            <ion-slide class="wrapper-blk">
+              <img src="{{trend.img1}}" alt="" srcset="">
+              <span class="level">Demo</span>
+            </ion-slide>
+          </ion-slides>
+        </div>
+      </div>
+    </section>
+
+    <section class="trending ion-padding-bottom">
+      <div class="wrapper">
+        <div class="wrapper-title">
+          <h5>
+            <span class="ion-text-uppercase bold">Latest</span>
+            <span class="ion-float-right">View All</span>
+          </h5>
+        </div>
+        <div class="wrapper-content">
+          <ion-slides pager="false" *ngFor="let latest of latestProducts" [options]="trendingSlide" #slider>
+            <ion-slide class="wrapper-blk">
+              <img src="{{latest.img1}}" alt="" srcset="">
+              <span class="level">Demo</span>
             </ion-slide>
           </ion-slides>
         </div>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PopoverController } from '@ionic/angular';
+import { DoctorService } from 'src/app/service/doctor.service';
 
 @Component({
   selector: 'app-global-user',
@@ -7,6 +8,7 @@ import { PopoverController } from '@ionic/angular';
   styleUrls: ['./global-user.page.scss'],
 })
 export class GlobalUserPage implements OnInit {
+  doctorDetails = [];
   sliderOpt = {
     initialSlide: 0,
     slidesPerView: 3,
@@ -36,7 +38,7 @@ export class GlobalUserPage implements OnInit {
       color: '#045de9'
     }
   ];
-  constructor(private popoverController: PopoverController) { }
+  constructor(private popoverController: PopoverController, public doctorService: DoctorService) { }
   async presentPopover(ev: any) {
     const popover = await this.popoverController.create({
       component:
@@ -59,6 +61,11 @@ export class GlobalUserPage implements OnInit {
   }
 
   ngOnInit() {
+    this.doctorService.getAllDoctors().subscribe(doctors => {
+      doctors.forEach(element => {
+        this.doctorDetails.push(element.data());
+      });
+    });
   }
 
 }

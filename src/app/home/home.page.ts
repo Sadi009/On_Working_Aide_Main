@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ScrollDetail } from '@ionic/core';
+import { ProductService } from '../service/product.service';
 
 @Component({
   selector: 'app-home',
@@ -8,6 +9,8 @@ import { ScrollDetail } from '@ionic/core';
 })
 export class HomePage {
   slider: any;
+  latestProducts = [];
+  trendingProducts = [];
   flashSlide = {
     initialSlide: 0,
     slidesPerView: 1,
@@ -24,16 +27,35 @@ export class HomePage {
   };
 
   showToolbar = false;
-  constructor() {
+  constructor(private product: ProductService) {
     this.slider = {
       isBeginningSlide: true,
       isEndSlide: false
     };
+
+    this.getLatest();
   }
   onScroll($event: CustomEvent<ScrollDetail>) {
     if ($event && $event.detail && $event.detail.scrollTop) {
       const scrollTop = $event.detail.scrollTop;
       this.showToolbar = scrollTop >= 225;
     }
+  }
+
+  getLatest() {
+    this.product.getLatestProducts().subscribe(prod => {
+      prod.forEach(a => {
+        this.latestProducts.push(a.data());
+      });
+    });
+  }
+
+  getTrending() {
+    this.product.getTrendingProducts().subscribe(prod => {
+      prod.forEach(a => {
+        console.log(a.data());
+        this.trendingProducts.push(a.data());
+      });
+    });
   }
 }

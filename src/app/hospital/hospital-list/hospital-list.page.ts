@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PopoverController } from '@ionic/angular';
+import { HospitalService } from 'src/app/service/hospital.service';
 
 @Component({
   selector: 'app-hospital-list',
@@ -7,19 +8,28 @@ import { PopoverController } from '@ionic/angular';
   styleUrls: ['./hospital-list.page.scss'],
 })
 export class HospitalListPage implements OnInit {
+	hospitalList = [];
 
-  constructor(private popoverController: PopoverController) { }
-  async presentPopover(ev: any) {
-    const popover = await this.popoverController.create({
-      component: HospitalListPopUpPage,
-      event: ev,
-      translucent: true
-    });
-    return await popover.present();
-  }
-  ngOnInit() {
-  }
-
+	constructor(private popoverController: PopoverController, public hospitalService: HospitalService) { }
+	  
+  	async presentPopover(ev: any) {
+    	const popover = await this.popoverController.create({
+			component: HospitalListPopUpPage,
+			event: ev,
+			translucent: true
+		});
+    	return await popover.present();
+	}
+	  
+	ngOnInit() {
+		console.log("Data Loading...");
+		this.hospitalService.getAllHospital().subscribe(hospitals => {
+			hospitals.forEach(element => {
+				console.log(element.data());
+				this.hospitalList.push(element.data());
+			});
+		});
+	}
 }
 
 @Component({
@@ -39,8 +49,7 @@ export class HospitalListPage implements OnInit {
   styleUrls: ['./hospital-list.page.scss'],
 })
 export class HospitalListPopUpPage implements OnInit {
-  constructor() { }
-  ngOnInit() {
-  }
-
+  	constructor() { }
+  	ngOnInit() {
+  	}
 }

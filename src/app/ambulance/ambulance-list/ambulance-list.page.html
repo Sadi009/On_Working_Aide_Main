@@ -3,21 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-searchbar placeholder="Filter Pizza" inputmode="email" type="decimal" [debounce]="250"></ion-searchbar>
-    <!-- <ion-segment [(ngModel)]="ambulanceList">
-      <ion-segment-button value="premium">
-        <ion-label>Premium</ion-label>
-      </ion-segment-button>
-      <ion-segment-button value="demo1">
-        <ion-label>demo-1</ion-label>
-      </ion-segment-button>
-      <ion-segment-button value="demo2">
-        <ion-label>demo-1</ion-label>
-      </ion-segment-button>
-      <ion-segment-button value="demo3">
-        <ion-label>demo-1</ion-label>
-      </ion-segment-button>
-    </ion-segment> -->
+    <ion-searchbar placeholder="Search Ambulance" inputmode="email" type="decimal" [debounce]="250"></ion-searchbar>
     <ion-buttons slot="end">
       <ion-button>
         <ion-icon slot="start" name="more"></ion-icon>
@@ -45,95 +31,31 @@
       </div>
     </div>
   </section>
+
   <section class="ambulance-list">
-    <ion-card class="shadow-md" [routerLink]="['/ambulance/details']">
+    <ion-card class="shadow-md" *ngFor="let ambulance of ambulanceList" [routerLink]="['/ambulance/details', ambulance]">
       <ion-item>
         <ion-thumbnail slot="start">
-          <img src="../../../assets/doctor/doctor1.png">
+          <img src="{{ambulance.img1}}">
         </ion-thumbnail>
         <div class="content-text">
           <div class="name">
-            <h6>night-qeen ambulance</h6>
+            <h6>{{ ambulance.name }}</h6>
           </div>
           <div class="type">
-            <small>cardiologist</small>
+            <small>{{ ambulance.type }}</small>
           </div>
           <div class="location">
             <small>
               <ion-icon slot="start" name="pin"></ion-icon>
-              Mizan Tea Hospital
+              {{ ambulance.city }}
             </small>
           </div>
         </div>
         <div class="content-info" slot="end">
           <div class="review">
             <ion-icon name="star-outline"></ion-icon>
-            5.0
-          </div>
-          <div class="more" (click)="presentPopover()">
-            <ion-icon slot="end" name="more"></ion-icon>
-          </div>
-        </div>
-      </ion-item>
-    </ion-card>
-
-    <ion-card class="shadow-md" [routerLink]="['/ambulance/details']">
-      <ion-item>
-        <ion-thumbnail slot="start">
-          <img src="../../../assets/doctor/doctor1.png">
-        </ion-thumbnail>
-        <div class="content-text">
-          <div class="name">
-            <h6>night-qeen ambulance</h6>
-          </div>
-          <div class="type">
-            <small>cardiologist</small>
-          </div>
-          <div class="location">
-            <small>
-              <ion-icon slot="start" name="pin"></ion-icon>
-              Mizan Tea Hospital
-            </small>
-          </div>
-        </div>
-        <div class="content-info" slot="end">
-          <div class="review">
-            <ion-icon name="star-outline"></ion-icon>
-            5.0
-          </div>
-          <div class="more" (click)="presentPopover()">
-            <ion-icon slot="end" name="more"></ion-icon>
-          </div>
-        </div>
-      </ion-item>
-    </ion-card>
-
-    <ion-card class="shadow-md" [routerLink]="['/ambulance/details']">
-      <ion-item>
-        <ion-thumbnail slot="start">
-          <img src="../../../assets/doctor/doctor1.png">
-        </ion-thumbnail>
-        <div class="content-text">
-          <div class="name">
-            <h6>night-qeen ambulance</h6>
-          </div>
-          <div class="type">
-            <small>cardiologist</small>
-          </div>
-          <div class="location">
-            <small>
-              <ion-icon slot="start" name="pin"></ion-icon>
-              Mizan Tea Hospital
-            </small>
-          </div>
-        </div>
-        <div class="content-info" slot="end">
-          <div class="review">
-            <ion-icon name="star-outline"></ion-icon>
-            5.0
-          </div>
-          <div class="more" (click)="presentPopover()">
-            <ion-icon slot="end" name="more"></ion-icon>
+            {{ ambulance.rating }}
           </div>
         </div>
       </ion-item>
