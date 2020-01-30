@@ -9,6 +9,32 @@
 
 <ion-content class="ion-padding">
   <section class="hospital-list">
+    <ion-card class="shadow-md" *ngFor="let hospital of hospitalList" [routerLink]="['/hospital/details', hospital]">
+      <ion-item>
+        <ion-thumbnail slot="start">
+          <img src="{{hospital.img1}}">
+        </ion-thumbnail>
+        <div class="content-text">
+          <div class="name">
+            <h6>{{ hospital.name }}</h6>
+          </div>
+          <div class="location">
+            <small>
+              <ion-icon slot="start" name="pin"></ion-icon>
+              {{ hospital.address }}
+            </small>
+          </div>
+          <div class="location">
+            <small>
+              <ion-icon slot="start" name="call"></ion-icon>
+              {{ hospital.contact }}
+            </small>
+          </div>
+        </div>
+      </ion-item>
+    </ion-card>
+  </section>
+  <!-- <section class="hospital-list">
     <ion-card class="shadow-md" [routerLink]="['/hospital/details']">
       <ion-item>
         <ion-thumbnail slot="start">
@@ -39,5 +65,5 @@
         </div>
       </ion-item>
     </ion-card>
-  </section>
+  </section> -->
 </ion-content>

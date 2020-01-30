@@ -1,9 +1,115 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>details</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="page-details ion-padding">
+  <section class="wrapper-slider">
+    <div class="wrapper">
+      <div class="wrapper-content">
+        <ion-slides pager="true" [options]="cateSlide" #slider>
+          <ion-slide class="wrapper-blk">
+            <img src="{{details.img1}}" alt="Image 1" srcset="">
+          </ion-slide>
+          <ion-slide class="wrapper-blk">
+            <img src="{{details.img2}}" alt="Image 2" srcset="">
+          </ion-slide>
+          <ion-slide class="wrapper-blk">
+            <img src="{{details.img3}}" alt="Image 3" srcset="">
+          </ion-slide>
+        </ion-slides>
+      </div>
+    </div>
+  </section>
 
+  <section class="hospital-details">
+    <ion-row>
+      <ion-col col-12>
+        <div class="hospital-title ion-text-capitalize">
+          <h4 class="ion-no-margin">{{details.name}}
+            <!-- <span class="ion-float-right">10% off</span> -->
+          </h4>
+          
+        </div>
+        <div class="contact">
+          <ion-item class="ion-no-padding">
+            <ion-avatar slot="start">
+              <img src="{{details.img1}}">
+            </ion-avatar>
+            <ion-label>
+              <h3>{{details.name}}</h3>
+              <ion-note>Call or Message us!</ion-note>
+            </ion-label>
+            <button class="icon">
+              <ion-icon slot="end" name="mail"></ion-icon>
+            </button>
+            <button class="icon">
+              <ion-icon slot="end" name="call"></ion-icon>
+            </button>
+          </ion-item>
+        </div>
+      </ion-col>
+    </ion-row>
+    <div class="toggle-btn">
+      <button (click)="toggleAccordion()" class="btn btn-round">
+        <i class="material-icons" *ngIf="isMenuOpen">
+          expand_less
+        </i>
+        <i class="material-icons" *ngIf="!isMenuOpen">
+          expand_more
+        </i>
+      </button>
+    </div>
+    <div [ngClass]="this.isMenuOpen ? 'active' : 'inactive'" class="description">
+      <div class="wrapper">
+        <div class="wrap-title">
+          <h4>Location</h4>
+        </div>
+        <div class="product-description">
+          <div class="content-box">
+            <p>Address: {{ details.address }}</p>
+            <br>
+            <p>Contact: {{ details.contact }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="wrapper">
+        <div class="wrap-title">
+          <h4 class="">Information</h4>
+        </div>
+        <div class="product-information">
+          <div class="content-box">
+            <ion-list>
+              <ion-item>
+                <ion-label>Beds
+                  <span>{{ details.beds }}</span>
+                </ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>Cabins
+                  <span>{{ details.cabins }}</span>
+                </ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>ICU
+                  <span>{{ details.icu }}</span>
+                </ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>CCU
+                  <span>{{ details.ccu }}</span>
+                </ion-label>
+              </ion-item>
+            </ion-list>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </ion-content>
