@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>Appointment's</ion-title>
+    <ion-title>Appointments</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -11,14 +11,19 @@
 
   <section class="appointments">
 
-    <ion-card class="shadow-md" [routerLink]="['/global-user/appointment']">
+    <ion-card class="shadow-md" *ngFor="let patient of patientsList  of list" [routerLink]="['/global-user/appointment', patient]">
       <ion-item>
         <div class="content-text">
           <div class="name">
-            <h6>periodic Health checks</h6>
+            <h6>Name: {{patient.patient_name}}</h6>
           </div>
           <div class="time">
-            <h6>11:Am - 12:00 am</h6>
+            <h6>Data: {{patient.appointment_date}}</h6>
+            <h6>Time: {{patient.appointment_time}}</h6>
+          </div>
+          <div class="status">
+            <p>Status: {{patient.status}}</p>
+            
           </div>
         </div>
         <ion-thumbnail slot="end">
@@ -27,37 +32,6 @@
       </ion-item>
     </ion-card>
 
-    <ion-card class="shadow-md" [routerLink]="['/global-user/appointment']">
-      <ion-item>
-        <div class="content-text">
-          <div class="name">
-            <h6>periodic Health checks</h6>
-          </div>
-          <div class="time">
-            <h6>11:Am - 12:00 am</h6>
-          </div>
-        </div>
-        <ion-thumbnail slot="end">
-          <img src="../../../assets/doctor/doctor1.png">
-        </ion-thumbnail>
-      </ion-item>
-    </ion-card>
-    
-    <ion-card class="shadow-md" [routerLink]="['/global-user/appointment']">
-      <ion-item>
-        <div class="content-text">
-          <div class="name">
-            <h6>periodic Health checks</h6>
-          </div>
-          <div class="time">
-            <h6>11:Am - 12:00 am</h6>
-          </div>
-        </div>
-        <ion-thumbnail slot="end">
-          <img src="../../../assets/doctor/doctor1.png">
-        </ion-thumbnail>
-      </ion-item>
-    </ion-card>
 
   </section>
 

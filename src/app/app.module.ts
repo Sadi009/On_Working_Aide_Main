@@ -24,6 +24,7 @@ import { HospitalService } from './service/hospital.service';
 import { UserService } from './service/user.service';
 import { ShopService } from './service/shop.service';
 import { ProductService } from './service/product.service';
+import { AppointmentService } from './service/appointment.service';
 
 @NgModule({
   declarations: [AppComponent, MenuComponent],
@@ -48,6 +49,7 @@ import { ProductService } from './service/product.service';
     UserService,
     ShopService,
     ProductService,
+    AppointmentService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent],

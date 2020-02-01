@@ -18,19 +18,27 @@
         </ion-thumbnail>
         <div class="content-text">
           <div class="name">
-            <h6>John Papa</h6>
-          </div>
-          <div class="title">
-            <small>Cardiologist</small>
+            <h6>Name: {{details.patient_name}}</h6>
+            <h6>Age: {{details.patient_age}}</h6>
           </div>
         </div>
       </ion-item>
+    </ion-card>
+    <ion-card class="shadow-md"> 
+      <div class="content-doctor">
+        <div class="name">
+          <h6>DR.Name: {{doctors.doctor_name}}</h6>
+        </div>
+        <div class="title">
+          <h6>Specialist: {{doctors.specialist}}</h6>
+        </div>
+      </div>
     </ion-card>
 
     <ion-card class="shadow-md">
       <ion-item>
         <div class="time">
-          <h6>11:00 AM - 12:00 pm</h6>
+          <h6>Schedule: {{doctors.start_time}} - {{doctors.end_time}}</h6>
         </div>
       </ion-item>
     </ion-card>
@@ -38,13 +46,13 @@
     <ion-card class="shadow-md">
       <ion-item>
         <div class="location">
-          <h6>127 - Sylhet Sadar, Sylhet Bangladesh</h6>
+          <h6>Address: {{doctors.address}}</h6>
         </div>
       </ion-item>
     </ion-card>
 
     <div class="booking-btn ion-padding-top">
-      <button class="btn btn-round btn-primary">
+      <button class="btn btn-round btn-primary" (click)="onCancelAppoinment(details)">
         cancel Appointment
       </button>
     </div>

@@ -12,7 +12,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="page-profile ion-padding">
+<ion-content class="page-profile ion-padding" *ngFor="let user of users">
   <div class="wrapper">
     <div class="wrapper-header">
       <div class="img-blc">
@@ -27,15 +27,13 @@
     <div class="wrapper-content">
       <div class="wrapper-list">
         <ion-text>
-          <h4 class="bold">Emily Hunt</h4>
-          <p>New York</p>
-          <p>USA</p>
+          <h4 class="bold">{{user.name}}</h4>
         </ion-text>
       </div>
       <div class="wrapper-list">
         <ion-text>
-          <h6>(123) 123456</h6>
-          <p>sarahlovelygirl@example.com</p>
+          <h6>Mobile: {{user.mobile}}</h6>
+          <p>Email: {{user.email}}</p>
         </ion-text>
       </div>
     </div>
@@ -49,28 +47,9 @@
     </div>
     <div class="wrapper-content">
       <ion-slides pager="false" [options]="sliderSmall" #slider>
-
         <ion-slide class="wrapper-blk">
-          <h6 class="bold">Home</h6>
-          <span>865 Manhatton St</span>
-          <span>New Rochelle</span>
-          <span>NY 10801</span>
+          <p>{{user.address}}</p>
         </ion-slide>
-
-        <ion-slide class="wrapper-blk">
-          <h6 class="bold">Home</h6>
-          <span>865 Manhatton St</span>
-          <span>New Rochelle</span>
-          <span>NY 10801</span>
-        </ion-slide>
-
-        <ion-slide class="wrapper-blk">
-          <h6 class="bold">Home</h6>
-          <span>865 Manhatton St</span>
-          <span>New Rochelle</span>
-          <span>NY 10801</span>
-        </ion-slide>
-
       </ion-slides>
     </div>
   </div>
